@@ -592,7 +592,16 @@ html { scroll-behavior: smooth; }
   .fiche-img { break-inside: avoid; page-break-inside: avoid; }
   .suivi-table tr, .parent-block, .parent-warn { break-inside: avoid; page-break-inside: avoid; }
   .parents { break-before: page; page-break-before: always; margin-top: 0; padding-top: 0; border-top: 0; }
-  .parent-link, .toc { display: none !important; }
+  .parent-link { display: none !important; }
+  .toc {
+    margin: 16px 0 0;
+    padding: 10px 14px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .toc ul { gap: 2px; }
+  .toc li { font-size: .9rem; }
+  .toc a { color: #1c2733; text-decoration: none; }
   .fiche { padding: 9px 0; }
   .cat-block { margin-top: 22px; }
   .level-block { margin-top: 14px; }
