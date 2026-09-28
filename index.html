@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon parcours de lecture — CM2B (élève &amp; parents)</title>
+  <meta name="description" content="Document à imprimer pour choisir ses 7 livres de l'année en CM2B : liste des œuvres proposées par niveau, présentation de chaque livre, carnet de lecteur, suivi des lectures et guide pour les parents.">
+  <link rel="stylesheet" href="assets/styles.css?v=13">
+</head>
+<body>
+  <button type="button" class="print-fab" id="print">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></svg>
+    Imprimer / PDF
+  </button>
+
+  <main class="document">
+    <header class="doc-head">
+      <p class="school">Parcours littéraire — Classe de CM2B</p>
+      <h1>Mon parcours de lecture</h1>
+      <p class="subtitle">Je choisis <strong>7 livres</strong> à lire pendant l'année.</p>
+      <span class="stamp" aria-hidden="true">7 livres<br>à choisir</span>
+      <p class="id-line">Prénom : ______________________ &nbsp;&nbsp;&nbsp; Date : ______ / ______ / 20______</p>
+      <p class="parent-link">Vous êtes parent ? Le guide d'accompagnement se trouve en fin de document.</p>
+    </header>
+
+    <aside class="disclaimer" role="note">
+      <p>Document réalisé par un parent d'élève de la classe, à titre bénévole et purement indicatif,
+      pour aider les enfants à choisir leurs lectures de l'année. Il ne s'agit pas d'un document de
+      l'école et il n'a aucune intention de se substituer aux consignes de l'enseignant ni de les
+      contredire. En cas de doute, se référer au maître.</p>
+    </aside>
+
+    <section class="toc" aria-label="Sommaire">
+      <h2>Sommaire</h2>
+      <ul>
+        <li>Les consignes du maître</li>
+        <li>Les trois niveaux de lecture</li>
+        <li>I. Œuvres du patrimoine</li>
+        <li>II. Littérature de jeunesse contemporaine</li>
+        <li>Mon carnet de lecteur</li>
+        <li>Aides complémentaires (suivi, guide parents)</li>
+      </ul>
+    </section>
+
+    <div class="zone zone-maitre">
+      <header class="zone-head">
+        <span class="zone-tag">Consignes du maître</span>
+        <h2>Liste des œuvres et carnet de lecteur</h2>
+        <p>Reproduits d'après les feuilles du maître. Le nombre de lectures (7) a été fixé par
+        l'enseignant ; la liste, elle, n'est ni exhaustive ni obligatoire. Les présentations des livres
+        (accroche, résumé, auteur) sont des aides proposées par un parent, signalées « Aide d'un parent ».</p>
+      </header>
+
+      <section class="note">
+        <h2>Comment utiliser cette liste ?</h2>
+        <p>Cette liste a pour objectif de proposer aux élèves un large choix d'œuvres à découvrir au cours
+        de l'année. Elle n'est <strong>ni exhaustive, ni obligatoire</strong>. Chaque élève reste libre de
+        choisir ses lectures en fonction de ses goûts, de ses envies et de ses capacités. Un livre qui
+        ne figure pas dans cette liste peut également être choisi.</p>
+        <p>Les niveaux indiqués correspondent à la <strong>difficulté de lecture de l'œuvre</strong> et ne
+        constituent pas une évaluation du niveau de l'élève.</p>
+      </section>
+
+      <section class="legend-block" id="niveaux">
+        <h2>Les trois niveaux de lecture</h2>
+        <ul class="legend" id="legend"></ul>
+      </section>
+
+      <div id="books"></div>
+
+      <section class="carnet" id="carnet">
+        <h2>Mon carnet de lecteur</h2>
+        <p>Pour chaque livre lu, je remplis mon carnet de lecteur. Voici les cinq parties du carnet.
+        Je peux cocher les cases au fur et à mesure.</p>
+        <div class="steps" id="steps"></div>
+        <p class="carnet-note">Le maître le rappelle : une partie du carnet se fait « si je veux et comme
+        je veux », une autre est « obligatoire, je dois donc la faire ».</p>
+      </section>
+    </div>
+
+    <div class="zone zone-aide">
+      <header class="zone-head">
+        <span class="zone-tag">Aides complémentaires</span>
+        <h2>Proposées par un parent</h2>
+        <p>Suivi des lectures et guide d'accompagnement. Ces éléments ne font pas partie des consignes de l'école.</p>
+      </header>
+
+      <section class="suivi" id="suivi">
+        <h2>Mes 7 livres de l'année</h2>
+        <p>Je note ici les 7 livres que j'ai choisis, puis je les remplis au fur et à mesure.</p>
+        <div id="suivi-table"></div>
+      </section>
+
+      <section class="parents" id="parents">
+        <p class="parents-kicker">Hors consignes de l'école — aide proposée par un parent</p>
+        <h2>Guide d'accompagnement</h2>
+        <p class="parents-lead">Ce guide explique le dispositif mis en place en classe et propose des repères
+        pour aider votre enfant à choisir ses lectures, à lire régulièrement et à remplir son carnet de lecteur.</p>
+        <div id="parents-content"></div>
+      </section>
+    </div>
+
+    <footer class="doc-foot">
+      <p>Parcours littéraire CM2B — document à imprimer pour choisir ses lectures de l'année.</p>
+      <p>Résumés et repères sur les auteurs établis d'après des sources documentaires et encyclopédiques.</p>
+      <p>Document réalisé par un parent d'élève, à titre indicatif. Il ne remplace pas les consignes de l'enseignant.</p>
+      <p>Illustrations du domaine public (Wikimedia Commons) pour les œuvres anciennes ; couvertures des éditions pour les autres.</p>
+    </footer>
+  </main>
+
+  <script src="assets/data.js?v=13"></script>
+  <script src="assets/app.js?v=13"></script>
+</body>
+</html>
