@@ -584,7 +584,9 @@ html { scroll-behavior: smooth; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
   .fiche, .step { break-inside: avoid; page-break-inside: avoid; }
-  .level-head, .cat-head, .doc-head { break-after: avoid; page-break-after: avoid; }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+  .doc-head { break-after: avoid; page-break-after: avoid; }
+  .legend-block, .note { break-inside: avoid; page-break-inside: avoid; }
   .carnet { break-before: page; page-break-before: always; margin-top: 0; }
   .zone-maitre, .zone-aide { background: #fff; }
   .zone-aide { break-before: page; page-break-before: always; margin-top: 0; }
