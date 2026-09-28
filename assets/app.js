@@ -82,7 +82,7 @@
     ["P", "C"].forEach(function (cat, i) {
       var books = LIVRES.filter(function (b) { return b.cat === cat; });
       html += '<section class="cat-block" id="' + (cat === "P" ? "patrimoine" : "contemporain") + '">';
-      html += '<h2 class="cat-head"><span class="num">' + (i === 0 ? "I" : "II") + "</span>" +
+      html += '<h2 class="cat-head"><span class="num">' + (i === 0 ? "3" : "4") + "</span>" +
         esc(CATEGORIES[cat]) + "</h2>";
       html += '<p class="cat-lead">Œuvres proposées, réparties par niveau de lecture.</p>';
       [1, 2, 3].forEach(function (n) {

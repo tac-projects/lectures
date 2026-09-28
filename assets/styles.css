@@ -259,9 +259,9 @@ h1 {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .toc li { font-size: .92rem; color: #3a4b60; }
 .toc a {
@@ -274,6 +274,13 @@ h1 {
 .toc a:hover,
 .toc a:focus-visible { color: #1565c0; text-decoration-color: currentColor; }
 .toc a:focus-visible { outline: 2px solid #1565c0; outline-offset: 2px; }
+.toc-num {
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--bleu);
+  font-weight: 700;
+}
+.toc-num::after { content: " –"; }
 
 /* ---------- Ancres du sommaire ---------- */
 html { scroll-behavior: smooth; }
@@ -293,6 +300,13 @@ html { scroll-behavior: smooth; }
   padding-bottom: 4px;
   border-bottom: 3px solid var(--marker);
 }
+.sec-num {
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--bleu);
+  font-size: .9em;
+}
+.sec-num::after { content: " –"; }
 .legend { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .legend li { display: flex; align-items: center; gap: 10px; font-size: .96rem; }
 .dot { width: 15px; height: 15px; border-radius: 52% 48% 55% 45%; flex: none; }
@@ -304,7 +318,8 @@ html { scroll-behavior: smooth; }
 /* ---------- Liste des œuvres ---------- */
 .cat-block { margin: 30px 0 0; }
 .cat-head { display: flex; align-items: baseline; gap: 12px; }
-.cat-head .num { font-size: 1.15rem; color: var(--bleu); }
+.cat-head .num { font-size: .9em; color: var(--bleu); }
+.cat-head .num::after { content: " –"; }
 .cat-lead { font-size: .88rem; color: var(--ink-soft); margin: 6px 0 0; }
 
 .level-block { margin: 20px 0 0; }
