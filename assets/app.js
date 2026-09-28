@@ -58,7 +58,7 @@
           "<h3>" + esc(book.titre) + "</h3>" +
           '<p class="meta">' +
             '<span class="author">' + esc(a.nom) + "</span>" +
-            (book.annee ? '<span class="year">(' + esc(book.annee) + ")</span>" : "") +
+            (book.annee ? '<span class="year">Œuvre : ' + esc(book.annee) + "</span>" : "") +
             iconesTags(book.tags) +
             '<span class="genre">' + esc(book.genre) + "</span>" +
             '<span class="lvl"><span class="dot n' + book.niveau + '"></span>' + esc(niveauLong(book)) + "</span>" +
@@ -69,10 +69,9 @@
               ? '<figure class="fiche-img"><img src="' + esc(book.image) + '" alt="' + esc(book.imageAlt || "") + '">' +
                 (book.imageCredit ? "<figcaption>" + esc(book.imageCredit) + "</figcaption>" : "") + "</figure>"
               : "") +
-            '<span class="aide-tag">Aide d\'un parent</span>' +
             (book.accroche ? '<p class="accroche">' + esc(book.accroche) + "</p>" : "") +
             '<p class="resume">' + esc(book.resume) + "</p>" +
-            (a.bio ? '<p class="auteur-bio">' + esc(a.bio) + "</p>" : "") +
+            (a.bio ? '<p class="auteur-bio"><span class="auteur-bio-label">L\'auteur</span> <strong class="auteur-bio-nom">' + esc(a.nom) + "</strong> " + esc(a.bio) + "</p>" : "") +
           "</div>" +
         "</div>" +
       "</div>";

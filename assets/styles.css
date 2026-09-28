@@ -208,17 +208,26 @@ h1 {
   background: #fdfaf2;
   border-radius: 0 8px 8px 0;
 }
-.aide-tag {
-  display: inline-block;
+.auteur-bio {
+  font-size: .85rem;
+  color: var(--ink-soft);
+  margin: 10px 0 0;
+  padding-top: 7px;
+  border-top: 1px dashed #e6dcc4;
+}
+.auteur-bio-label {
   font-family: var(--font-hand);
   font-size: .78rem;
   color: #8a6d1b;
-  background: #f7e6bf;
-  border-radius: 999px;
-  padding: 1px 8px;
-  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-right: 7px;
 }
-.auteur-bio { font-size: .85rem; color: var(--ink-soft); margin: 6px 0 0; }
+.auteur-bio-nom {
+  font-family: var(--font-hand);
+  font-size: .95rem;
+  color: #17324f;
+}
 
 .fiche-img { float: right; width: 132px; margin: 0 0 10px 14px; }
 .fiche-img img {
@@ -251,10 +260,8 @@ h1 {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 4px 18px;
+  grid-template-columns: 1fr;
+  gap: 4px;
 }
 .toc li { font-size: .92rem; color: #3a4b60; }
 .toc a {
@@ -585,7 +592,6 @@ html { scroll-behavior: smooth; }
 @media (max-width: 620px) {
   body { font-size: 15px; }
   .document { margin: 0; padding: 24px 18px 40px; border-radius: 0; box-shadow: none; }
-  .toc ul { grid-auto-flow: row; grid-template-rows: none; grid-template-columns: 1fr; }
   .stamp { position: static; display: inline-block; transform: rotate(-3deg); margin: 12px 0 0; }
   .steps { grid-template-columns: 1fr; }
 }
