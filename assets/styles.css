@@ -255,6 +255,20 @@ h1 {
   gap: 4px 18px;
 }
 .toc li { font-size: .92rem; color: #3a4b60; }
+.toc a {
+  color: #2a4a6b;
+  text-decoration: underline;
+  text-decoration-color: #b9c9dc;
+  text-underline-offset: 3px;
+  border-radius: 4px;
+}
+.toc a:hover,
+.toc a:focus-visible { color: #1565c0; text-decoration-color: currentColor; }
+.toc a:focus-visible { outline: 2px solid #1565c0; outline-offset: 2px; }
+
+/* ---------- Ancres du sommaire ---------- */
+html { scroll-behavior: smooth; }
+#consignes, #niveaux, #patrimoine, #contemporain, #carnet, #aides { scroll-margin-top: 18px; }
 
 /* ---------- Légende des niveaux ---------- */
 .legend-block { margin: 26px 0 0; }
@@ -575,4 +589,5 @@ h1 {
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
 }
