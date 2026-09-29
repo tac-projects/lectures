@@ -55,8 +55,8 @@
   --ink: #1f2d3d;
   --ink-soft: #45566b;
   --line: #cfd9e6;
-  --grid-h: rgba(90, 130, 180, .11);
-  --grid-v: rgba(90, 130, 180, .07);
+  --grid: 5mm;
+  --grid-img: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='5'%20height='5'%20viewBox='0%200%205%205'%3E%3Cpath%20d='M0.125%200V5M0%200.125H5'%20fill='none'%20stroke='%235a82b4'%20stroke-opacity='0.35'%20stroke-width='0.25'/%3E%3C/svg%3E");
   --vert: #2e7d32;
   --bleu: #1565c0;
   --rouge: #c62828;
@@ -87,9 +87,9 @@ a { color: var(--bleu); }
   margin: 28px auto 90px;
   padding: 46px 48px 40px;
   background-color: var(--paper);
-  background-image:
-    repeating-linear-gradient(to bottom, var(--grid-h) 0 1px, transparent 1px 28px),
-    repeating-linear-gradient(to right, var(--grid-v) 0 1px, transparent 1px 28px);
+  background-image: var(--grid-img);
+  background-size: var(--grid) var(--grid);
+  background-repeat: repeat;
   border-radius: 3px;
   box-shadow: 0 1px 0 #d9d2c2, 0 20px 44px -20px rgba(40, 40, 30, .55);
 }
@@ -512,12 +512,14 @@ html { scroll-behavior: smooth; }
     margin: 0;
     padding: 46px 48px 40px;
     background-color: transparent;
-    background-image:
-      repeating-linear-gradient(to bottom, var(--grid-h) 0 1px, transparent 1px 28px),
-      repeating-linear-gradient(to right, var(--grid-v) 0 1px, transparent 1px 28px);
+    background-image: var(--grid-img);
   }
 
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .fiche { display: flow-root; }
+  .fiche .check { float: left; }
+  .fiche-body { margin-left: 46px; }
 
   .step { break-inside: avoid; page-break-inside: avoid; }
   h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
