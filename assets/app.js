@@ -100,9 +100,14 @@
   }
 
   /* Statuts du carnet : vert (si je veux), rouge sinon (obligatoire).
-     La couleur est portée par la case à cocher en tête de ligne. */
+     La case garde son style d'origine ; le point de couleur est à l'intérieur. */
   function statutClass(statut) {
     return statut === "libre" ? "libre" : "obligatoire";
+  }
+
+  function checkBox(statut) {
+    return '<span class="check" aria-hidden="true"><span class="check-dot ' +
+      statutClass(statut) + '"></span></span>';
   }
 
   function renderCarnet() {
@@ -112,14 +117,13 @@
         ["libre", "« Si je veux et comme je veux » — facultatif"],
         ["obligatoire", "« C'est obligatoire, je dois donc le faire »"]
       ].map(function (it) {
-        return '<li><span class="check ' + it[0] + '" aria-hidden="true"></span>' + esc(it[1]) + "</li>";
+        return "<li>" + checkBox(it[0]) + esc(it[1]) + "</li>";
       }).join("");
     }
 
     document.getElementById("steps").innerHTML = CARNET.map(function (step, i) {
       var points = step.points.map(function (p) {
-        return '<li><span class="check ' + statutClass(p.statut) + '" aria-hidden="true"></span>' +
-          "<span>" + esc(p.texte) + "</span></li>";
+        return "<li>" + checkBox(p.statut) + "<span>" + esc(p.texte) + "</span></li>";
       }).join("");
       return '<div class="step">' +
         '<h3><span class="num">' + (i + 1) + "</span>" + esc(step.titre) + "</h3>" +

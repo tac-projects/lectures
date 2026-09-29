@@ -430,7 +430,19 @@ html { scroll-behavior: smooth; }
 .step li { display: grid; grid-template-columns: 22px 1fr; gap: 9px; font-size: .87rem; align-items: start; }
 .step li .check { width: 18px; height: 18px; border-width: 2px; margin-top: 1px; }
 
-/* ---------- Statuts du carnet : la couleur est dans la case à cocher ---------- */
+/* ---------- Statuts du carnet : point vert / rouge dans la case d'origine ---------- */
+.step li .check,
+.carnet-legende .check { position: relative; }
+.check-dot {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.check-dot.libre { background: var(--vert); }
+.check-dot.obligatoire { background: var(--rouge); }
 .carnet-legende {
   list-style: none;
   margin: 14px 0 0;
@@ -441,8 +453,6 @@ html { scroll-behavior: smooth; }
 }
 .carnet-legende li { display: flex; align-items: center; gap: 9px; font-size: .85rem; color: var(--ink-soft); }
 .carnet-legende .check { width: 18px; height: 18px; border-width: 2px; margin: 0; transform: none; }
-.check.libre { border-color: var(--vert); }
-.check.obligatoire { border-color: var(--rouge); }
 
 /* ---------- Suivi des 7 lectures ---------- */
 .suivi { margin: 34px 0 0; }
