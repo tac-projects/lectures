@@ -158,7 +158,7 @@ const LIVRES = [
     tags: ["Contes & fables"],
     image: "assets/images/fables.webp",
     imageAlt: "Illustration de Gustave Doré : La Cigale et la Fourmi.",
-    imageCredit: "Gustave Doré — domaine public",
+    imageCredit: "Gustave Doré",
     accroche: "Des animaux qui parlent et des morales qui font sourire.",
     resume: "Ce recueil rassemble une sélection des fables les plus célèbres de Jean de La Fontaine, publiées entre 1668 et 1694. Dans ces courts récits écrits en vers, les animaux parlent et se conduisent comme des hommes : la cigale insouciante face à la fourmi prévoyante, le corbeau vaniteux berné par le renard flatteur, le lièvre trop sûr de lui qui défie la tortue, ou le loup qui cherche noise à l'agneau. Chaque fable est une petite scène vive et souvent drôle, qui se termine par une morale à méditer. La Fontaine s'inspire des fabulistes de l'Antiquité, Ésope, Babrius et Phèdre, mais il renouvelle le genre par la vivacité de ses vers et sa finesse. Lire ces fables, c'est découvrir un trésor de la langue française, apprendre à reconnaître les ruses et les faux-semblants, et prendre goût à la poésie. Un recueil parfait à lire à voix haute."
   },
@@ -188,7 +188,7 @@ const LIVRES = [
     tags: ["Contes & fables"],
     image: "assets/images/contes.webp",
     imageAlt: "Estampe ancienne : le loup et le Petit Chaperon rouge.",
-    imageCredit: "Estampe ancienne (Rijksmuseum) — domaine public",
+    imageCredit: "Estampe ancienne (Rijksmuseum)",
     accroche: "Cendrillon, le Chaperon rouge, le Chat botté… les contes de notre enfance.",
     resume: "Ce recueil réunit les contes les plus célèbres de notre patrimoine, mis par écrit par Charles Perrault à la fin du XVIIe siècle : Cendrillon et sa pantoufle de verre, Le Petit Chaperon rouge et le loup, Le Chat botté qui fait la fortune de son maître, La Belle au bois dormant, Barbe bleue et sa chambre interdite, Riquet à la houppe, Les Fées, Le Petit Poucet perdu dans la forêt… Chaque histoire, courte et imagée, raconte une épreuve, un danger ou une ruse, et se termine souvent par une morale qui invite à réfléchir. Perrault s'appuie sur des récits populaires transmis oralement et les transforme en petits chefs-d'œuvre d'écriture. Ces contes, que l'on croit connaître, gagnent à être relus : ils parlent de peur, de courage, d'injustice et d'espoir, et sont à l'origine de tout un imaginaire partagé. Un recueil à savourer seul ou à raconter à voix haute."
   },
@@ -203,7 +203,7 @@ const LIVRES = [
     tags: ["Récits & nouvelles"],
     image: "assets/images/segouin.webp",
     imageAlt: "Illustration d'époque de La Chèvre de monsieur Seguin.",
-    imageCredit: "Illustration d'époque (1904) — domaine public",
+    imageCredit: "Illustration d'époque (1904)",
     accroche: "Blanquette rêve de liberté ; le loup, lui, n'est jamais loin.",
     resume: "Blanquette, la chèvre de monsieur Seguin, vit attachée dans le jardin de son maître. Mais elle s'ennuie et rêve de la montagne, de l'herbe libre et de l'aventure. Monsieur Seguin, qui a déjà perdu toutes ses chèvres de la même façon, la met en garde : la montagne, c'est le loup. Pourtant, un jour, Blanquette ronge sa corde et s'échappe. La voilà enfin libre, gambadant dans la nature et savourant chaque instant de cette journée tant attendue. Mais le soir tombe, et avec lui l'ombre du danger… Ce récit court et poignant, extrait des Lettres de mon moulin d'Alphonse Daudet, raconte le désir irrésistible de liberté et ce qu'il peut coûter. La langue y est simple et magnifique, et l'histoire laisse une impression durable. Un texte parfait pour découvrir ce qu'est un récit à suspense."
   },
@@ -233,7 +233,7 @@ const LIVRES = [
     tags: ["Récits & nouvelles", "Humour", "Aventure"],
     image: "assets/images/renart.webp",
     imageAlt: "Enluminure médiévale du Roman de Renart.",
-    imageCredit: "Enluminure médiévale — domaine public",
+    imageCredit: "Enluminure médiévale",
     accroche: "Un goupil rusé, un loup naïf : le plus grand farceur du Moyen Âge.",
     resume: "Au Moyen Âge, les animaux forment une véritable société, avec un roi, Noble le lion, et une cour. Mais l'un d'eux, Renart le goupil, ne respecte aucune règle : rusé, menteur et toujours affamé, il ne pense qu'à tromper les autres. Sa victime favorite est Ysengrin le loup, fort mais naïf, qu'il ridiculise sans cesse : il lui vole ses provisions, le fait tomber dans un puits, l'entraîne dans des pièges grossiers. Autour d'eux gravitent Tibert le chat, Grimbert le blaireau, Chantecler le coq et bien d'autres. Ces récits, composés aux XIIe et XIIIe siècles par plusieurs auteurs anonymes, se moquent avec drôlerie des puissants, des faux dévots et des hypocrites. Drôles, parfois cruels, les épisodes s'enchaînent comme les chapitres d'une série pleine de rebondissements. Lire Le Roman de Renart, c'est découvrir la littérature médiévale par une porte joyeuse et vivante."
   },
@@ -248,7 +248,7 @@ const LIVRES = [
     tags: ["Aventure", "Fantastique / imaginaire", "Contes & fables"],
     image: "assets/images/pinocchio.webp",
     imageAlt: "Illustration de Maria Louise Kirk pour Pinocchio.",
-    imageCredit: "Maria Louise Kirk — domaine public",
+    imageCredit: "Maria Louise Kirk",
     accroche: "Un pantin de bois prend vie — et chaque mensonge allonge son nez.",
     resume: "Dans un petit village italien, Geppetto, un menuisier pauvre et solitaire, sculpte dans un morceau de bois un pantin qui, à sa grande surprise, prend vie : Pinocchio. Le pantin est joyeux, curieux, mais terriblement désobéissant. À chaque mensonge, son nez s'allonge démesurément. Il refuse l'école, se laisse entraîner par de mauvaises compagnies et enchaîne les catastrophes : il fuit au théâtre de marionnettes, se fait voler son argent, se retrouve au pays des Jouets, et bien d'autres mésaventures. Heureusement, la Fée veille sur lui, et un grillon parlant tente de le raisonner. Au fil de ses épreuves, Pinocchio apprend peu à peu la valeur du travail, de l'honnêteté et du courage. Ce grand classique italien de Carlo Collodi, publié en 1881, raconte l'apprentissage difficile de la liberté et de la responsabilité. Un conte initiatique plein de rebondissements, drôle et émouvant."
   },
@@ -263,7 +263,7 @@ const LIVRES = [
     tags: ["Aventure", "Nature", "Fantastique / imaginaire"],
     image: "assets/images/nils.webp",
     imageAlt: "Illustration d'Ottilia Adelborg pour Nils Holgersson.",
-    imageCredit: "Ottilia Adelborg — domaine public",
+    imageCredit: "Ottilia Adelborg",
     accroche: "Réduit à la taille d'un pouce, Nils s'envole avec les oies sauvages.",
     resume: "Nils est un petit garçon turbulent qui vit dans une ferme du sud de la Suède. Un jour, parce qu'il a joué un mauvais tour à un lutin, il est puni : le voilà réduit à la taille d'un pouce, et capable de comprendre le langage des animaux. Pour échapper à la colère de ses parents, il s'accroche au cou de Martin, une oie domestique, qui s'envole rejoindre un grand vol d'oies sauvages mené par la sage et sévère Akka. Commence alors un extraordinaire voyage à travers toute la Suède : lacs, forêts, montagnes, villes et campagnes défilent, peuplés d'animaux qui parlent et de légendes anciennes. Nils découvre son pays, mais aussi le courage, la solidarité et le respect des autres. Peu à peu, l'enfant égoïste se transforme et apprend à aider ceux qui l'entourent. Ce roman de Selma Lagerlöf, commandé comme un livre de géographie, est devenu un immense classique de la littérature jeunesse."
   },
@@ -278,7 +278,7 @@ const LIVRES = [
     tags: ["Aventure", "Humour", "Nature"],
     image: "assets/images/saules.webp",
     imageAlt: "Frontispice de Paul Bransom pour Le Vent dans les saules.",
-    imageCredit: "Paul Bransom — domaine public",
+    imageCredit: "Paul Bransom",
     accroche: "Quatre amis animaux, une rivière, et un crapaud fou d'automobiles.",
     resume: "Taupe, fatigué de son ménage souterrain, abandonne un jour sa maison et découvre la rivière. Il y rencontre Rat, qui l'initie aux joies de la vie au bord de l'eau : promenades en barque, pique-niques, longues conversations. Ensemble, ils rendent visite au sage et bourru Blaireau, puis à l'extravagant Crapaud, passionné de nouveautés et incapable de résister à la moindre mode — surtout les automobiles. Quand Crapaud, grisé par sa passion, se met dans de mauvais draps, ses amis doivent se mobiliser pour l'aider. Ce grand classique anglais de Kenneth Grahame, publié en 1908, mêle humour, tendresse et amour de la nature. Derrière les aventures des animaux, il célèbre l'amitié, la fidélité et la douceur de la vie simple. Un récit où les bêtes ressemblent tendrement aux hommes, à lire pour le plaisir des personnages et de la langue."
   },
@@ -293,7 +293,7 @@ const LIVRES = [
     tags: ["Fantastique / imaginaire", "Aventure"],
     image: "assets/images/alice.webp",
     imageAlt: "Illustration de John Tenniel pour Alice au pays des merveilles.",
-    imageCredit: "John Tenniel — domaine public",
+    imageCredit: "John Tenniel",
     accroche: "En suivant un lapin pressé, Alice bascule dans un monde sans logique.",
     resume: "En apercevant un lapin blanc vêtu d'un gilet, qui regarde sa montre et semble très pressé, Alice le suit jusque dans son terrier. La voilà qui bascule dans un monde étrange et merveilleux : le pays des merveilles. Là, plus rien n'obéit à la logique. Alice grandit et rapetisse au gré des gâteaux et des potions, pleure des mares de larmes, discute avec une chenille qui fume, prend le thé avec un Chapelier fou et un Lièvre de mars, rencontre un Chat au sourire inquiétant qui disparaît à volonté, et croise la terrible Reine de cœur. Chaque rencontre est l'occasion de jeux de langage, de devinettes et de situations saugrenues. Écrit par Lewis Carroll en 1865, ce récit plein de fantaisie et d'humour noir est aussi une réflexion sur l'enfance, le temps et les règles. Un classique intemporel qui a nourri l'imaginaire de générations de lecteurs."
   },
@@ -309,7 +309,7 @@ const LIVRES = [
     note: "Œuvre commune de la classe",
     image: "assets/images/odyssee.webp",
     imageAlt: "Peinture de J. M. W. Turner : Ulysse et Polyphème.",
-    imageCredit: "J. M. W. Turner — domaine public",
+    imageCredit: "J. M. W. Turner",
     accroche: "Dix ans pour rentrer chez soi, entre monstres, sirènes et tempêtes.",
     resume: "La guerre de Troie est terminée, mais Ulysse, l'un de ses héros, n'est pas encore rentré chez lui. Il veut rejoindre Ithaque, où l'attendent sa femme Pénélope et son fils Télémaque, mais les dieux en ont décidé autrement : son voyage durera dix longues années. Sur la mer, il affronte des épreuves sans nombre : le Cyclope Polyphème, qui dévore ses compagnons ; les sirènes, dont le chant attire les marins vers la mort ; la magicienne Circé ; la nymphe Calypso, qui le retient prisonnier ; les tempêtes envoyées par Poséidon. Pendant ce temps, à Ithaque, des prétendants s'installent dans son palais et convoitent sa femme et son trône, tandis que Pénélope ruse pour gagner du temps. Cette épopée attribuée à Homère est l'un des textes fondateurs de notre culture : elle célèbre l'intelligence, le courage et le prix du retour. Un fabuleux récit d'aventures et d'émotions, souvent adapté pour la jeunesse."
   },
@@ -324,7 +324,7 @@ const LIVRES = [
     tags: ["Aventure", "Nature"],
     image: "assets/images/robinson.webp",
     imageAlt: "Illustration ancienne de Robinson Crusoé.",
-    imageCredit: "Carington Bowles — domaine public",
+    imageCredit: "Carington Bowles",
     accroche: "Seul sur une île déserte pendant vingt-huit ans.",
     resume: "Embarqué pour une expédition, Robinson Crusoé échoue sur une île déserte après un violent naufrage. Seul survivant, il doit tout réinventer : se nourrir, se loger, se protéger, survivre. Il construit une cabane, cultive du blé, élève des chèvres, fabrique des outils, apprivoise un perroquet, et tient un journal pour ne pas perdre la raison. Pendant vingt-huit ans, il organise sa vie sur cette île, seul face à la nature. Puis un jour, il découvre des empreintes de pas : d'autres humains sont passés par là. Sa solitude serait-elle sur le point de se briser ? Ce roman de Daniel Defoe, publié en 1719, s'inspire d'une histoire vraie. Il raconte la solitude, l'ingéniosité et la rencontre de l'autre, et a donné naissance au mythe du naufragé qui reconstruit sa vie."
   },
@@ -339,7 +339,7 @@ const LIVRES = [
     tags: ["Aventure"],
     image: "assets/images/ileautresor.webp",
     imageAlt: "Illustration de N. C. Wyeth pour L'Île au trésor.",
-    imageCredit: "N. C. Wyeth — domaine public",
+    imageCredit: "N. C. Wyeth",
     accroche: "Une carte, un trésor, et des pirates prêts à tout.",
     resume: "Le jeune Jim Hawkins vit paisiblement dans l'auberge de ses parents quand un vieux marin, Billy Bones, s'y installe et meurt en laissant derrière lui une carte : celle de l'île où le capitaine Flint a caché son trésor. Jim confie la carte au docteur Livesey et au chevalier Trelawney, qui arment aussitôt un navire, l'Hispaniola, et embarquent pour l'île. Mais parmi l'équipage se cachent le redoutable pirate Long John Silver, un homme charmant et dangereux, et toute une bande de flibustiers prêts à tout pour s'emparer du butin. Trahisons, tempêtes, mutinerie et chasse au trésor : l'aventure promet d'être dangereuse. Publié par Robert Louis Stevenson en 1883, ce roman a façonné pour toujours l'image du pirate et de la carte au trésor. Un grand récit de suspense, porté par un héros courageux et un méchant inoubliable."
   },
@@ -354,7 +354,7 @@ const LIVRES = [
     tags: ["Récits & nouvelles", "Aventure", "Solidarité / amitié"],
     image: "assets/images/sansfamille.webp",
     imageAlt: "Gravure d'après Émile Bayard pour Sans famille.",
-    imageCredit: "H. T. Hildibrand, d'après Émile Bayard — domaine public",
+    imageCredit: "H. T. Hildibrand, d'après Émile Bayard",
     accroche: "Vendu à un musicien ambulant, Rémi part chercher sa vraie famille.",
     resume: "Rémi est un enfant trouvé, élevé avec tendresse par la mère Barberin dans un village de France. Mais quand son mari, blessé et sans ressources, revient, il vend l'enfant à Vitalis, un musicien ambulant un peu rude. Commence alors pour Rémi une longue errance sur les routes, en compagnie de la troupe de Vitalis : le chien Capi, le singe Joli-Cœur, et bientôt le petit Mattia. Le froid, la faim, la misère et la séparation éprouvent cruellement le garçon. Mais Rémi est courageux et garde espoir : il cherche sa véritable famille, celle qui l'a abandonné. Au fil de ses rencontres, il découvre l'injustice du monde, mais aussi l'amitié et la générosité. Ce roman d'Hector Malot, publié en 1878, a connu un immense succès populaire. Une grande histoire pleine d'émotions, qui parle d'abandon, de courage et de fidélité."
   },
@@ -369,7 +369,7 @@ const LIVRES = [
     tags: ["Aventure"],
     image: "assets/images/grant.webp",
     imageAlt: "Gravure d'Édouard Riou pour Les Enfants du capitaine Grant.",
-    imageCredit: "Édouard Riou — domaine public",
+    imageCredit: "Édouard Riou",
     accroche: "Un message dans une bouteille, et une course autour du monde.",
     resume: "Lors d'une partie de pêche, Lord Glenarvan et son équipage capturent un requin dans le ventre duquel se trouve une bouteille contenant un message à demi effacé : il révèle qu'un certain capitaine Grant a fait naufrage quelque part sur la côte du Pacifique. Décidés à retrouver le disparu, Lord et Lady Glenarvan emmènent à bord de leur yacht, le Duncan, les deux enfants du capitaine, la jeune Mary et le petit Robert. Le voyage les conduit le long des côtes de l'Amérique du Sud, puis jusqu'en Australie, sur des terres hostiles. Ils affrontent des tempêtes, des bandits, de fausses pistes et des trahisons, sans jamais perdre espoir. Ce grand roman de Jules Verne, publié en 1868, mêle aventure, géographie et suspense. Une véritable course autour du monde pour retrouver un père disparu, portée par des personnages courageux et généreux."
   },
