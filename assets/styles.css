@@ -179,6 +179,7 @@ h1 {
   border: 1.5px solid var(--line);
 }
 .zone-maitre { background: #f7fafd; border-color: #d3e0ee; }
+.zone-carnet { background: #eef4fc; border-color: #cddff2; }
 .zone-aide { background: #fdf8ec; border-color: #ecdcb4; }
 .zone-head { margin: 0 0 6px; }
 .zone-tag {
@@ -191,6 +192,7 @@ h1 {
   margin-bottom: 6px;
 }
 .zone-maitre .zone-tag { background: #e3eef9; color: #1565c0; }
+.zone-carnet .zone-tag { background: #dbeafb; color: #1565c0; }
 .zone-aide .zone-tag { background: #f7e6bf; color: #8a6d1b; }
 .zone-head h2 {
   font-family: var(--font-hand);
