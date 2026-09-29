@@ -655,9 +655,16 @@ body.is-locked .gate {
 }
 
 .gate-text {
-  margin: 0 0 20px;
+  margin: 0;
   color: var(--ink-soft);
   font-size: .92rem;
+}
+
+.gate-note {
+  margin: 8px 0 20px;
+  color: var(--ink-soft);
+  font-size: .82rem;
+  font-style: italic;
 }
 
 .gate-label {
