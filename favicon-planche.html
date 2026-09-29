@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planche — 10 propositions de favicon</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  @font-face { font-family: "Patrick Hand"; src: url("assets/fonts/patrick-hand-latin-400-normal.woff2") format("woff2"); font-display: swap; }
+  @font-face { font-family: "Nunito"; font-weight: 400; src: url("assets/fonts/nunito-latin-400-normal.woff2") format("woff2"); font-display: swap; }
+  @font-face { font-family: "Nunito"; font-weight: 700; src: url("assets/fonts/nunito-latin-700-normal.woff2") format("woff2"); font-display: swap; }
+
+  :root {
+    --paper: #fffdf7;
+    --ink: #1f2d3d;
+    --ink-soft: #45566b;
+    --line: #cfd9e6;
+    --bleu: #1565c0;
+    --rouge: #c62828;
+    --vert: #2e7d32;
+    --marker: #ffe680;
+    --pencil: #e08a2b;
+    --hand: "Patrick Hand", "Segoe Print", cursive;
+    --body: "Nunito", Verdana, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 64px;
+    font-family: var(--body);
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='5'%20height='5'%3E%3Cpath%20d='M0.125%200V5M0%200.125H5'%20fill='none'%20stroke='%235a82b4'%20stroke-opacity='0.16'%20stroke-width='0.25'/%3E%3C/svg%3E");
+    background-size: 5mm 5mm;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  header.doc { margin-bottom: 28px; }
+  .kicker { font-family: var(--hand); color: var(--bleu); font-size: 1.05rem; margin: 0; }
+  h1 { font-family: var(--hand); font-size: 2rem; margin: 4px 0 6px; }
+  header.doc p.intro { margin: 0; color: var(--ink-soft); font-size: .92rem; max-width: 70ch; }
+
+  .legend-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 26px; padding: 0; list-style: none; }
+  .legend-chips li { display: inline-flex; align-items: center; gap: 7px; font-size: .8rem; color: var(--ink-soft); border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 4px 11px; }
+  .swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+
+  .card { background: #fff; border: 1.5px solid var(--line); border-radius: 14px; padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 14px; }
+  .card-head { display: flex; align-items: baseline; gap: 10px; }
+  .num { font-family: var(--hand); color: var(--rouge); font-size: 1.15rem; min-width: 24px; }
+  .card-head h2 { font-family: var(--hand); font-size: 1.2rem; margin: 0; font-weight: 400; }
+  .card-head .why { margin-left: auto; font-size: .72rem; color: var(--ink-soft); text-align: right; }
+
+  .big { display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 12px; background: #f4f7fb; }
+  .big svg { width: 112px; height: 112px; border-radius: 22px; box-shadow: 0 3px 10px rgba(31,45,61,.14); }
+
+  .sizes { display: flex; align-items: flex-end; gap: 16px; }
+  .sizes .item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .sizes .item span { font-size: .68rem; color: var(--ink-soft); }
+  .sizes svg { display: block; }
+
+  .tabbar { display: flex; align-items: center; gap: 8px; background: #e8edf4; border-radius: 10px 10px 0 0; padding: 7px 8px 0; }
+  .tab { display: inline-flex; align-items: center; gap: 7px; background: #fff; border-radius: 8px 8px 0 0; padding: 6px 12px 7px; font-size: .78rem; color: var(--ink); box-shadow: 0 -1px 3px rgba(31,45,61,.08); }
+  .tab svg { display: block; }
+  .tab .x { color: #9aa7b6; margin-left: 4px; }
+
+  footer.notes { margin-top: 34px; border-top: 1px solid var(--line); padding-top: 16px; color: var(--ink-soft); font-size: .85rem; }
+  footer.notes h3 { font-family: var(--hand); color: var(--ink); font-size: 1.1rem; margin: 0 0 8px; }
+  footer.notes ul { margin: 0; padding-left: 20px; }
+  footer.notes li { margin-bottom: 5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="doc">
+    <p class="kicker">Parcours littéraire — CM2B</p>
+    <h1>10 propositions de favicon</h1>
+    <p class="intro">Chaque proposition est un SVG autonome. Elle est affichée en grand, puis aux tailles réelles
+    d'un onglet (16, 32 px) et d'un raccourci mobile (64 px), avec un aperçu dans la barre d'onglets. Le carré
+    arrondi reste lisible même réduit à 16 px.</p>
+  </header>
+
+  <ul class="legend-chips">
+    <li><i class="swatch" style="background:#fffdf7;border:1px solid #cfd9e6"></i>papier #fffdf7</li>
+    <li><i class="swatch" style="background:#1565c0"></i>encre bleue #1565c0</li>
+    <li><i class="swatch" style="background:#c62828"></i>tampon rouge #c62828</li>
+    <li><i class="swatch" style="background:#ffe680"></i>surligneur #ffe680</li>
+    <li><i class="swatch" style="background:#2e7d32"></i>vert #2e7d32</li>
+  </ul>
+
+  <div class="grid" id="grid"></div>
+
+  <footer class="notes">
+    <h3>Notes de lecture</h3>
+    <ul>
+      <li><strong>Lisibilité d'abord :</strong> à 16 px, seuls le « 7 », le livre ouvert et la pile restent nets — les détails fins (grille, lunettes) doivent être simplifiés si retenus.</li>
+      <li><strong>Fidélité au projet :</strong> la proposition 3 (tampon « 7 ») reprend le tampon rouge déjà présent dans l'en-tête du document et le nombre de livres à choisir.</li>
+      <li><strong>Recommandation :</strong> la n° 1 (livre ouvert) pour la neutralité, la n° 3 (tampon 7) pour la personnalité — les deux tiennent le mieux à 16 px.</li>
+      <li>Le format final attendu est un <code>.svg</code> à <code>viewBox="0 0 64 64"</code>, déclaré dans le <code>&lt;head&gt;</code> par <code>&lt;link rel="icon"&gt;</code>.</li>
+    </ul>
+  </footer>
+</div>
+
+<script>
+const paper = "#fffdf7", ink = "#1f2d3d", bleu = "#1565c0", rouge = "#c62828", vert = "#2e7d32", marker = "#ffe680", pencil = "#e08a2b";
+
+const icons = [
+  {
+    name: "Livre ouvert",
+    why: "neutre, très lisible",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}" stroke="${bleu}" stroke-width="3"/>
+      <path d="M32 20c-4-3-9-4-14-4v28c5 0 10 1 14 4 4-3 9-4 14-4V16c-5 0-10 1-14 4z" fill="none" stroke="${bleu}" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M32 20v28" stroke="${bleu}" stroke-width="4" stroke-linecap="round"/>`
+  },
+  {
+    name: "Livre ouvert garni",
+    why: "plus riche, moyen à 16px",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}" stroke="${bleu}" stroke-width="3"/>
+      <path d="M32 21c-4-3-9-4-14-4v27c5 0 10 1 14 4 4-3 9-4 14-4V17c-5 0-10 1-14 4z" fill="none" stroke="${bleu}" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M32 21v27" stroke="${bleu}" stroke-width="4" stroke-linecap="round"/>
+      <path d="M23 25h5M23 31h5M36 25h5M36 31h5" stroke="${ink}" stroke-width="2.6" stroke-linecap="round" opacity=".6"/>`
+  },
+  {
+    name: "Tampon « 7 »",
+    why: "signature du document",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}"/>
+      <circle cx="32" cy="32" r="25" fill="none" stroke="${rouge}" stroke-width="3.5"/>
+      <circle cx="32" cy="32" r="20" fill="none" stroke="${rouge}" stroke-width="2"/>
+      <text x="32" y="43" text-anchor="middle" font-family="Patrick Hand, cursive" font-size="34" fill="${rouge}">7</text>`
+  },
+  {
+    name: "Page de cahier",
+    why: "grille = identité",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}"/>
+      <g stroke="#5a82b4" stroke-opacity=".35" stroke-width="1.4">
+        <path d="M0 14h64M0 24h64M0 34h64M0 44h64M0 54h64"/>
+        <path d="M14 0v64M24 0v64M34 0v64M44 0v64M54 0v64"/>
+      </g>
+      <path d="M12 4v56" stroke="${rouge}" stroke-width="2.4" stroke-opacity=".7"/>
+      <path d="M6 6h52v52H6z" fill="none" stroke="${bleu}" stroke-width="3" rx="10"/>`
+  },
+  {
+    name: "Pile de livres",
+    why: "lisible, chaleureux",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}"/>
+      <rect x="14" y="40" width="36" height="10" rx="2.5" fill="${rouge}"/>
+      <rect x="17" y="30" width="30" height="10" rx="2.5" fill="${vert}"/>
+      <rect x="20" y="20" width="24" height="10" rx="2.5" fill="${bleu}"/>
+      <rect x="14" y="40" width="5" height="10" rx="1.5" fill="${marker}"/>
+      <rect x="17" y="30" width="5" height="10" rx="1.5" fill="${marker}"/>
+      <rect x="20" y="20" width="5" height="10" rx="1.5" fill="${marker}"/>`
+  },
+  {
+    name: "Livre surligné",
+    why: "rappel du marqueur",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}"/>
+      <rect x="14" y="12" width="36" height="40" rx="4" fill="#fff" stroke="${bleu}" stroke-width="3.5"/>
+      <rect x="18" y="30" width="28" height="9" fill="${marker}"/>
+      <path d="M20 22h24M20 40h18" stroke="${ink}" stroke-width="3" stroke-linecap="round" opacity=".55"/>`
+  },
+  {
+    name: "Livre + crayon",
+    why: "geste d'écriture",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}"/>
+      <path d="M32 17c-4-3-9-4-14-4v26c5 0 10 1 14 4 4-3 9-4 14-4V13c-5 0-10 1-14 4z" fill="none" stroke="${bleu}" stroke-width="3.6" stroke-linejoin="round"/>
+      <path d="M32 17v26" stroke="${bleu}" stroke-width="3.6"/>
+      <path d="M44 46l8-8 4 4-8 8-5 1z" fill="${pencil}" stroke="${ink}" stroke-width="2" stroke-linejoin="round"/>`
+  },
+  {
+    name: "Lunettes de lecture",
+    why: "élégant, fragile à 16px",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}"/>
+      <path d="M32 18c-4-3-9-4-13-4v25c4 0 9 1 13 4 4-3 9-4 13-4V14c-4 0-9 1-13 4z" fill="none" stroke="${bleu}" stroke-width="3.4" stroke-linejoin="round"/>
+      <path d="M32 18v25" stroke="${bleu}" stroke-width="3.4"/>
+      <g fill="none" stroke="${ink}" stroke-width="3">
+        <circle cx="23" cy="37" r="7"/><circle cx="41" cy="37" r="7"/><path d="M30 37h4"/>
+      </g>`
+  },
+  {
+    name: "Signet « 7 »",
+    why: "compact, net",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}"/>
+      <path d="M20 8h24v48l-12-9-12 9z" fill="${rouge}"/>
+      <text x="32" y="36" text-anchor="middle" font-family="Patrick Hand, cursive" font-size="22" fill="${paper}">7</text>`
+  },
+  {
+    name: "Tranche de livre",
+    why: "sobre, très lisible",
+    svg: `<rect width="64" height="64" rx="14" fill="${paper}" stroke="${bleu}" stroke-width="3"/>
+      <rect x="16" y="14" width="32" height="36" rx="3" fill="${bleu}"/>
+      <rect x="16" y="14" width="8" height="36" fill="${marker}"/>
+      <path d="M30 22h13M30 31h13M30 40h9" stroke="${paper}" stroke-width="3" stroke-linecap="round"/>`
+  }
+];
+
+const grid = document.getElementById("grid");
+
+icons.forEach((ic, i) => {
+  const card = document.createElement("article");
+  card.className = "card";
+
+  const big = document.createElement("div");
+  big.className = "big";
+  big.innerHTML = `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${ic.name}">${ic.svg}</svg>`;
+
+  const sizes = document.createElement("div");
+  sizes.className = "sizes";
+  [64, 32, 16].forEach(s => {
+    const item = document.createElement("div");
+    item.className = "item";
+    item.innerHTML = `<svg width="${s}" height="${s}" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">${ic.svg}</svg><span>${s}px</span>`;
+    sizes.appendChild(item);
+  });
+
+  const tab = document.createElement("div");
+  tab.className = "tabbar";
+  tab.innerHTML = `<span class="tab"><svg width="16" height="16" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">${ic.svg}</svg>Mon parcours de lecture<span class="x">×</span></span>`;
+
+  const head = document.createElement("div");
+  head.className = "card-head";
+  head.innerHTML = `<span class="num">${String(i + 1).padStart(2, "0")}</span><h2>${ic.name}</h2><span class="why">${ic.why}</span>`;
+
+  card.append(head, big, sizes, tab);
+  grid.appendChild(card);
+});
+</script>
+</body>
+</html>
