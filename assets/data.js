@@ -640,12 +640,13 @@ const FICHE_LECTURE = {
     { label: "Date de parution" },
     { label: "Nombre de pages" },
     { label: "Temps de lecture" },
-    { label: "Niveau", cases: [1, 2, 3] }
+    { label: "Niveau", cases: [1, 2, 3] },
+    { label: "Couverture du livre", cover: true, wide: true }
   ],
   blocs: [
     {
       titre: "Je présente l'auteur",
-      texte: "Où et quand est-il né ? Quelles œuvres a-t-il écrites ?",
+      texte: "Où et quand est-il né et mort ? Quelles œuvres a-t-il écrites ?",
       type: "lignes",
       lignes: 6,
       page: 1

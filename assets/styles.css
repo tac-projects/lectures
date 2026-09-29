@@ -519,6 +519,20 @@ html { scroll-behavior: smooth; }
 .fv-cases { display: inline-flex; gap: 12px; align-items: center; }
 .fv-case { display: inline-flex; align-items: center; gap: 5px; font-size: .8rem; color: var(--ink-soft); }
 .fv-case .dot { width: 11px; height: 11px; }
+.fv-cover { align-items: flex-start; }
+.fv-cover-box {
+  flex: 1 1 auto;
+  min-height: 20mm;
+  border: 1.5px dashed #b9c9dc;
+  border-radius: 8px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  text-align: center;
+  font-size: .72rem;
+  color: #9fb0c4;
+}
 
 .fv-page { display: flex; flex-direction: column; gap: 12px; }
 .fv-page-2 { margin-top: 26px; }

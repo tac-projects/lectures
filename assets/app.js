@@ -160,6 +160,11 @@
 
     var id = FICHE_LECTURE.identification.map(function (f) {
       var mod = f.wide ? " wide" : "";
+      if (f.cover) {
+        return '<div class="fv-id-item' + mod + ' fv-cover">' +
+          '<span class="fv-id-label">' + esc(f.label) + "</span>" +
+          '<span class="fv-cover-box">je colle, j\'imprime ou je dessine la couverture</span></div>';
+      }
       if (f.cases) {
         return '<p class="fv-id-item' + mod + '">' +
           '<span class="fv-id-label">' + esc(f.label) + "</span>" +
