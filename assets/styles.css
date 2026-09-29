@@ -562,23 +562,24 @@ html { scroll-behavior: smooth; }
 .print-fab:hover { background: #0d47a1; }
 .print-fab svg { width: 18px; height: 18px; }
 
-/* ---------- Impression ---------- */
+/* ---------- Impression : rendu identique à l'écran ---------- */
 @media print {
-  @page { size: A4; margin: 15mm 14mm; }
+  @page { size: A4; margin: 0; }
 
-  html, body { background: #fff !important; }
-  body { font-size: 11pt; color: #1c2733; }
+  html, body { background: #e7e1d4 !important; }
 
   .print-fab { display: none !important; }
 
   .document {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    background-image: none;
-    box-shadow: none;
-    border-radius: 0;
+    width: 190mm;
+    margin: 10mm auto;
+    padding: 46px 48px 40px;
+    background-color: var(--paper);
+    background-image:
+      repeating-linear-gradient(to bottom, var(--grid-h) 0 1px, transparent 1px 28px),
+      repeating-linear-gradient(to right, var(--grid-v) 0 1px, transparent 1px 28px);
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #d9d2c2, 0 20px 44px -20px rgba(40, 40, 30, .55);
   }
 
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -587,31 +588,9 @@ html { scroll-behavior: smooth; }
   h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
   .doc-head { break-after: avoid; page-break-after: avoid; }
   .legend-block, .note { break-inside: avoid; page-break-inside: avoid; }
-  .carnet { break-before: page; page-break-before: always; margin-top: 0; }
-  .zone-maitre, .zone-aide { background: #fff; }
-  .zone-aide { break-before: page; page-break-before: always; margin-top: 0; }
-  .fiche-aide { break-inside: avoid; page-break-inside: avoid; background: #fff; }
+  .fiche-aide { break-inside: avoid; page-break-inside: avoid; }
   .fiche-img { break-inside: avoid; page-break-inside: avoid; }
-  .suivi-table tr, .parent-block, .parent-warn { break-inside: avoid; page-break-inside: avoid; }
-  .parents { break-before: page; page-break-before: always; margin-top: 0; padding-top: 0; border-top: 0; }
-  .parent-link { display: none !important; }
-  .toc {
-    margin: 16px 0 0;
-    padding: 10px 14px;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-  .toc ul { gap: 2px; }
-  .toc li { font-size: .9rem; }
-  .toc a { color: #1c2733; text-decoration: none; }
-  .fiche { padding: 9px 0; }
-  .cat-block { margin-top: 22px; }
-  .level-block { margin-top: 14px; }
-  .step { padding: 12px 14px; }
-  .doc-foot { margin-top: 18px; }
-
-  a { color: #1c2733; text-decoration: none; }
-  .note { background: #fffdf0; }
+  .suivi-table tr, .parent-block, .parent-warn, .toc { break-inside: avoid; page-break-inside: avoid; }
 }
 
 /* ---------- Petits écrans ---------- */
