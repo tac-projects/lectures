@@ -667,6 +667,12 @@ body.is-locked .gate {
   font-style: italic;
 }
 
+.gate-note strong {
+  background: linear-gradient(transparent 55%, var(--marker) 55%);
+  padding: 0 3px;
+  font-style: normal;
+}
+
 .gate-label {
   display: block;
   margin-bottom: 6px;
