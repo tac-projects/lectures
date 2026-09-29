@@ -154,11 +154,60 @@
       "<thead>" + head + "</thead><tbody>" + body + "</tbody></table>";
   }
 
+  function renderFiche() {
+    var host = document.getElementById("fiche-vierge");
+    if (!host || typeof FICHE_LECTURE === "undefined") return;
+
+    var id = FICHE_LECTURE.identification.map(function (f) {
+      var mod = f.wide ? " wide" : "";
+      if (f.cases) {
+        return '<p class="fv-id-item' + mod + '">' +
+          '<span class="fv-id-label">' + esc(f.label) + "</span>" +
+          '<span class="fv-cases">' + f.cases.map(function (n) {
+            return '<span class="fv-case"><span class="dot n' + n + '"></span>' +
+              esc(NIVEAUX[n].court) + "</span>";
+          }).join("") + "</span></p>";
+      }
+      return '<p class="fv-id-item' + mod + '">' +
+        '<span class="fv-id-label">' + esc(f.label) + "</span>" +
+        '<span class="fv-fill"></span></p>';
+    }).join("");
+
+    var blocs = FICHE_LECTURE.blocs.map(function (b) {
+      var body;
+      if (b.type === "lignes") {
+        var lines = "";
+        for (var n = 0; n < b.lignes; n++) lines += '<span class="fv-line"></span>';
+        body = '<div class="fv-lines">' + lines + "</div>";
+      } else {
+        body = '<div class="fv-draw" role="img" aria-label="Emplacement pour un dessin"></div>';
+      }
+      return '<div class="fv-bloc' + (b.grow ? " fv-bloc-grow" : "") + '">' +
+        "<h3>" + esc(b.titre) + "</h3>" +
+        '<p class="fv-hint">' + esc(b.texte) + "</p>" +
+        body + "</div>";
+    });
+
+    var colonnes = { gauche: [], droite: [] };
+    blocs.forEach(function (html, i) {
+      var col = FICHE_LECTURE.blocs[i].col === "droite" ? "droite" : "gauche";
+      colonnes[col].push(html);
+    });
+
+    host.innerHTML =
+      '<div class="fv-id">' + id + "</div>" +
+      '<div class="fv-body">' +
+        '<div class="fv-col">' + colonnes.gauche.join("") + "</div>" +
+        '<div class="fv-col">' + colonnes.droite.join("") + "</div>" +
+      "</div>";
+  }
+
   function init() {
     renderLegend();
     renderBooks();
     renderSuivi();
     renderCarnet();
+    renderFiche();
     document.getElementById("print").addEventListener("click", function () {
       window.print();
     });

@@ -286,7 +286,7 @@ h1 {
 
 /* ---------- Ancres du sommaire ---------- */
 html { scroll-behavior: smooth; }
-#consignes, #niveaux, #patrimoine, #contemporain, #carnet, #aides { scroll-margin-top: 18px; }
+#consignes, #niveaux, #patrimoine, #contemporain, #carnet, #aides, #fiche { scroll-margin-top: 18px; }
 
 /* ---------- Légende des niveaux ---------- */
 .legend-block { margin: 26px 0 0; }
@@ -489,6 +489,71 @@ html { scroll-behavior: smooth; }
 .suivi-table th:nth-child(6), .suivi-table td:nth-child(6) { width: 74px; text-align: center; }
 .suivi-table td .check { display: block; margin: 0 auto; }
 
+/* ---------- Fiche de lecture vierge (section 7) ---------- */
+.zone-fiche { background: #fff; border-color: #d8e0ea; }
+.zone-fiche .zone-tag { background: #e3eef9; color: #1565c0; }
+
+.fiche-vierge { margin-top: 12px; }
+
+.fv-id {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 22px;
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: #fbfdff;
+}
+.fv-id-item {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: .86rem;
+  min-height: 1.5em;
+}
+.fv-id-item.wide { grid-column: 1 / -1; }
+.fv-id-label { font-family: var(--font-hand); color: #17324f; white-space: nowrap; }
+.fv-fill { flex: 1 1 auto; border-bottom: 1.5px dotted #9fb0c4; height: 1.05em; min-width: 40px; }
+.fv-cases { display: inline-flex; gap: 12px; align-items: center; }
+.fv-case { display: inline-flex; align-items: center; gap: 5px; font-size: .8rem; color: var(--ink-soft); }
+.fv-case .dot { width: 11px; height: 11px; }
+
+.fv-body {
+  display: grid;
+  grid-template-columns: minmax(190px, 34%) 1fr;
+  gap: 12px 16px;
+  align-items: stretch;
+}
+.fv-col { display: flex; flex-direction: column; gap: 12px; }
+.fv-bloc {
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 14px 11px;
+  background: #fbfdff;
+}
+.fv-bloc-grow { flex: 1 1 auto; display: flex; flex-direction: column; }
+.fv-bloc h3 {
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  color: #17324f;
+  margin: 0 0 2px;
+}
+.fv-hint { font-size: .78rem; color: var(--ink-soft); margin: 0 0 7px; }
+
+.fv-lines { display: flex; flex-direction: column; }
+.fv-line { height: 5.5mm; border-bottom: 1px solid #c4d1e0; }
+.fv-line:last-child { border-bottom-color: #9fb0c4; }
+
+.fv-draw {
+  flex: 1 1 auto;
+  min-height: 24mm;
+  border: 1.5px dashed #b9c9dc;
+  border-radius: 8px;
+  background: #fff;
+}
+
 /* ---------- Pied ---------- */
 .doc-foot {
   margin-top: 30px;
@@ -551,6 +616,9 @@ html { scroll-behavior: smooth; }
   .legend-block, .note { break-inside: avoid; page-break-inside: avoid; }
   .carnet { break-before: page; page-break-before: always; margin-top: 0; }
   .zone-aide { break-before: page; page-break-before: always; margin-top: 0; }
+  .zone-fiche { break-before: page; page-break-before: always; margin-top: 0; padding: 0 0 6px; }
+  .fv-body, .fv-id, .fv-bloc { break-inside: avoid; page-break-inside: avoid; }
+  .doc-foot { margin-top: 14px; padding-top: 10px; }
   .fiche-img { break-inside: avoid; page-break-inside: avoid; }
   .suivi-table tr, .toc { break-inside: avoid; page-break-inside: avoid; }
 }
