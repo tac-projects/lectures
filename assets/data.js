@@ -629,8 +629,9 @@ const SUIVI_COLS = ["Livre choisi", "Niveau", "Commencé le", "Terminé le", "Ca
 
 /* Fiche de lecture vierge (section 7), proposée par un parent comme brouillon
    pour préparer le carnet de lecteur. Reprend les champs exigés par CARNET.
-   type de bloc : "lignes" (zone réglée à écrire) ou "dessin" (cadre à illustrer).
-   page : 1 (recto) ou 2 (verso) ; grow : le bloc s'étire pour remplir la page. */
+   type de bloc : "lignes" (zone réglée), "dessin" (cadre à illustrer) ou
+   "couverture" (grande zone pour coller/imprimer/dessiner la couverture).
+   page : 1, 2 ou 3 ; grow : le bloc s'étire pour remplir la page. */
 const FICHE_LECTURE = {
   reprise: "Ma fiche de lecture (suite)",
   identification: [
@@ -640,36 +641,42 @@ const FICHE_LECTURE = {
     { label: "Date de parution" },
     { label: "Nombre de pages" },
     { label: "Temps de lecture" },
-    { label: "Niveau", cases: [1, 2, 3] },
-    { label: "Couverture du livre", cover: true, wide: true }
+    { label: "Niveau", cases: [1, 2, 3] }
   ],
   blocs: [
+    {
+      titre: "Couverture du livre",
+      texte: "Je colle, j'imprime ou je dessine la couverture du livre.",
+      type: "couverture",
+      page: 1,
+      grow: true
+    },
     {
       titre: "Je présente l'auteur",
       texte: "Où et quand est-il né et mort ? Quelles œuvres a-t-il écrites ?",
       type: "lignes",
-      lignes: 6,
-      page: 1
+      lignes: 8,
+      page: 2
     },
     {
       titre: "Je raconte l'histoire",
       texte: "Au moins 10 phrases : les personnages, le résumé ou un passage qui m'a marqué(e).",
       type: "lignes",
-      lignes: 14,
-      page: 1
+      lignes: 16,
+      page: 2
     },
     {
       titre: "Je donne mon avis",
       texte: "Au moins 10 phrases : ce qui m'a plu, les illustrations, la présentation du livre.",
       type: "lignes",
-      lignes: 12,
-      page: 2
+      lignes: 14,
+      page: 3
     },
     {
       titre: "J'illustre",
       texte: "Un dessin, un collage ou une scène du livre.",
       type: "dessin",
-      page: 2,
+      page: 3,
       grow: true
     }
   ]

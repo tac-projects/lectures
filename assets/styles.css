@@ -519,7 +519,6 @@ html { scroll-behavior: smooth; }
 .fv-cases { display: inline-flex; gap: 12px; align-items: center; }
 .fv-case { display: inline-flex; align-items: center; gap: 5px; font-size: .8rem; color: var(--ink-soft); }
 .fv-case .dot { width: 11px; height: 11px; }
-.fv-cover { align-items: flex-start; }
 .fv-cover-box {
   flex: 1 1 auto;
   min-height: 20mm;
@@ -533,6 +532,7 @@ html { scroll-behavior: smooth; }
   font-size: .72rem;
   color: #9fb0c4;
 }
+.fv-bloc-cover .fv-cover-box { height: 150mm; }
 
 .fv-page { display: flex; flex-direction: column; gap: 12px; }
 .fv-page-2 { margin-top: 26px; }
@@ -638,7 +638,7 @@ html { scroll-behavior: smooth; }
   .carnet { break-before: page; page-break-before: always; margin-top: 0; }
   .zone-aide { break-before: page; page-break-before: always; margin-top: 0; }
   .zone-fiche { break-before: page; page-break-before: always; margin-top: 0; padding: 0; border: 0; background: #fff; }
-  .fv-page-2 { break-before: page; page-break-before: always; margin-top: 0; }
+  .fv-page-2, .fv-page-3 { break-before: page; page-break-before: always; margin-top: 0; }
   .fv-page, .fv-id, .fv-bloc { break-inside: avoid; page-break-inside: avoid; }
   .doc-foot { margin-top: 14px; padding-top: 10px; }
   .fiche-img { break-inside: avoid; page-break-inside: avoid; }

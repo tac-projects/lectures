@@ -160,11 +160,6 @@
 
     var id = FICHE_LECTURE.identification.map(function (f) {
       var mod = f.wide ? " wide" : "";
-      if (f.cover) {
-        return '<div class="fv-id-item' + mod + ' fv-cover">' +
-          '<span class="fv-id-label">' + esc(f.label) + "</span>" +
-          '<span class="fv-cover-box">je colle, j\'imprime ou je dessine la couverture</span></div>';
-      }
       if (f.cases) {
         return '<p class="fv-id-item' + mod + '">' +
           '<span class="fv-id-label">' + esc(f.label) + "</span>" +
@@ -178,38 +173,44 @@
         '<span class="fv-fill"></span></p>';
     }).join("");
 
-    var blocs = FICHE_LECTURE.blocs.map(function (b) {
+    function bloc(b) {
       var body;
       if (b.type === "lignes") {
         var lines = "";
         for (var n = 0; n < b.lignes; n++) lines += '<span class="fv-line"></span>';
         body = '<div class="fv-lines">' + lines + "</div>";
+      } else if (b.type === "couverture") {
+        body = '<div class="fv-cover-box" role="img" aria-label="Zone pour la couverture du livre">' +
+          "je colle, j'imprime ou je dessine la couverture</div>";
       } else {
         body = '<div class="fv-draw" role="img" aria-label="Emplacement pour un dessin"></div>';
       }
-      return '<div class="fv-bloc' + (b.grow ? " fv-bloc-grow" : "") + '">' +
+      var cls = "fv-bloc" +
+        (b.grow ? " fv-bloc-grow" : "") +
+        (b.type === "couverture" ? " fv-bloc-cover" : "");
+      return '<div class="' + cls + '">' +
         "<h3>" + esc(b.titre) + "</h3>" +
         '<p class="fv-hint">' + esc(b.texte) + "</p>" +
         body + "</div>";
-    });
-
-    var pages = { 1: [], 2: [] };
-    blocs.forEach(function (html, i) {
-      pages[FICHE_LECTURE.blocs[i].page === 2 ? 2 : 1].push(html);
-    });
+    }
 
     var reprise = '<p class="fv-reprise">' +
       '<span class="fv-reprise-title">' + esc(FICHE_LECTURE.reprise) + "</span>" +
       '<span class="fv-id-label">Titre du livre</span><span class="fv-fill"></span></p>';
 
-    host.innerHTML =
-      '<div class="fv-page">' +
-        '<div class="fv-id">' + id + "</div>" +
-        pages[1].join("") +
-      "</div>" +
-      '<div class="fv-page fv-page-2">' +
-        reprise + pages[2].join("") +
-      "</div>";
+    var html = "";
+    [1, 2, 3].forEach(function (pg) {
+      var blocs = FICHE_LECTURE.blocs.filter(function (b) {
+        return (b.page || 1) === pg;
+      });
+      if (!blocs.length) return;
+      var head = pg === 1
+        ? '<div class="fv-id">' + id + "</div>"
+        : reprise;
+      html += '<div class="fv-page fv-page-' + pg + '">' +
+        head + blocs.map(bloc).join("") + "</div>";
+    });
+    host.innerHTML = html;
   }
 
   function init() {
