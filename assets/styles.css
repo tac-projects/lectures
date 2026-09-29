@@ -654,14 +654,8 @@ body.is-locked .gate {
   line-height: 1.1;
 }
 
-.gate-text {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: .92rem;
-}
-
 .gate-note {
-  margin: 8px 0 20px;
+  margin: 0 0 20px;
   color: var(--ink-soft);
   font-size: .82rem;
   font-style: italic;
@@ -684,7 +678,7 @@ body.is-locked .gate {
 
 .gate-input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 12px 44px 12px 14px;
   border: 2px solid var(--line);
   border-radius: 10px;
   background: #fff;
@@ -692,6 +686,39 @@ body.is-locked .gate {
   font: inherit;
   font-size: 1rem;
 }
+
+.gate-field { position: relative; }
+
+.gate-reveal {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease;
+}
+
+.gate-reveal:hover { color: var(--ink); background: rgba(31, 45, 61, .06); }
+
+.gate-reveal:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, .2);
+}
+
+.gate-reveal svg { width: 20px; height: 20px; }
+.gate-reveal .ico-eye-off { display: none; }
+.gate-reveal.is-visible .ico-eye { display: none; }
+.gate-reveal.is-visible .ico-eye-off { display: block; }
 
 .gate-input:focus-visible {
   outline: none;

@@ -7,17 +7,22 @@
   <meta name="description" content="Document à imprimer pour choisir ses 7 livres de l'année en CM2B : liste des œuvres proposées par niveau, présentation de chaque livre, carnet de lecteur et suivi des lectures.">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <link rel="icon" href="favicon.svg?v=1" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=50">
+  <link rel="stylesheet" href="assets/styles.css?v=52">
 </head>
 <body class="is-locked">
   <div class="gate" id="gate">
     <form class="gate-box" id="gate-form" autocomplete="off">
       <p class="gate-school">Parcours littéraire — CM2B</p>
       <h1 class="gate-title">Document protégé</h1>
-      <p class="gate-text">Saisis le mot de passe pour accéder au document.</p>
       <p class="gate-note"><strong>Document privé. Son partage se fait exclusivement avec l'autorisation de son propriétaire.</strong></p>
       <label class="gate-label" for="gate-input">Mot de passe</label>
-      <input class="gate-input" id="gate-input" type="password" inputmode="text" autocomplete="off" required>
+      <div class="gate-field">
+        <input class="gate-input" id="gate-input" type="password" inputmode="text" autocomplete="off" required>
+        <button type="button" class="gate-reveal" id="gate-reveal" aria-label="Afficher le mot de passe" aria-pressed="false">
+          <svg class="ico-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="ico-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+        </button>
+      </div>
       <p class="gate-error" id="gate-error" role="alert" hidden>Mot de passe incorrect.</p>
       <button class="gate-submit" type="submit">Ouvrir le document</button>
     </form>
@@ -130,6 +135,6 @@
   </main>
 
   <script src="assets/data.js?v=35"></script>
-  <script src="assets/app.js?v=36"></script>
+  <script src="assets/app.js?v=37"></script>
 </body>
 </html>

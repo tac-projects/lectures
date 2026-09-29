@@ -233,7 +233,18 @@
     var form = document.getElementById("gate-form");
     var input = document.getElementById("gate-input");
     var err = document.getElementById("gate-error");
+    var reveal = document.getElementById("gate-reveal");
     if (!form || !input) return;
+    if (reveal) {
+      reveal.addEventListener("click", function () {
+        var shown = input.type === "text";
+        input.type = shown ? "password" : "text";
+        reveal.classList.toggle("is-visible", !shown);
+        reveal.setAttribute("aria-pressed", String(!shown));
+        reveal.setAttribute("aria-label", shown ? "Afficher le mot de passe" : "Masquer le mot de passe");
+        input.focus();
+      });
+    }
     if (gateOuvert()) {
       gateOuvrir();
     } else {
