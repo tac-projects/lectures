@@ -550,12 +550,12 @@ html { scroll-behavior: smooth; }
 .fv-hint { font-size: .78rem; color: var(--ink-soft); margin: 0 0 7px; }
 
 .fv-lines { display: flex; flex-direction: column; }
-.fv-line { height: 5.5mm; border-bottom: 1px solid #c4d1e0; }
+.fv-line { height: 6.5mm; border-bottom: 1px solid #c4d1e0; }
 .fv-line:last-child { border-bottom-color: #9fb0c4; }
 
 .fv-draw {
   flex: 1 1 auto;
-  height: 85mm;
+  height: 72mm;
   border: 1.5px dashed #b9c9dc;
   border-radius: 8px;
   background: #fff;

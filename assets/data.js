@@ -647,7 +647,7 @@ const FICHE_LECTURE = {
       titre: "Je présente l'auteur",
       texte: "Où et quand est-il né ? Quelles œuvres a-t-il écrites ?",
       type: "lignes",
-      lignes: 4,
+      lignes: 6,
       page: 1
     },
     {
