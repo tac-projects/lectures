@@ -609,13 +609,114 @@ html { scroll-behavior: smooth; }
 .print-fab:hover { background: #0d47a1; }
 .print-fab svg { width: 18px; height: 18px; }
 
+/* ---------- Écran de mot de passe (protection côté client) ---------- */
+.gate { display: none; }
+
+body.is-locked { overflow: hidden; }
+body.is-locked .document,
+body.is-locked .print-fab { display: none; }
+body.is-locked .gate {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #e7e1d4;
+}
+
+.gate-box {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px 30px 26px;
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: 0 24px 50px -20px rgba(31, 45, 61, .35);
+  text-align: center;
+}
+
+.gate-school {
+  margin: 0 0 4px;
+  color: var(--ink-soft);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.gate-title {
+  margin: 0 0 8px;
+  font-family: var(--font-hand);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.gate-text {
+  margin: 0 0 20px;
+  color: var(--ink-soft);
+  font-size: .92rem;
+}
+
+.gate-label {
+  display: block;
+  margin-bottom: 6px;
+  text-align: left;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.gate-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.gate-input:focus-visible {
+  outline: none;
+  border-color: var(--bleu);
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, .2);
+}
+
+.gate-error {
+  margin: 10px 0 0;
+  color: var(--rouge);
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.gate-submit {
+  width: 100%;
+  margin-top: 18px;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 18px;
+  background: var(--bleu);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: background .18s ease;
+}
+
+.gate-submit:hover { background: #0d47a1; }
+
 /* ---------- Impression : rendu identique à l'écran ---------- */
 @media print {
   @page { size: A4; margin: 12mm; }
 
   html, body { background: #fff !important; }
 
-  .print-fab { display: none !important; }
+  .print-fab, .gate { display: none !important; }
 
   .document {
     width: auto;

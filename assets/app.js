@@ -213,7 +213,46 @@
     host.innerHTML = html;
   }
 
+  /* Protection côté client : le mot de passe est stocké encodé (base64) et la
+     session déverrouillée est mémorisée le temps de l'onglet (sessionStorage).
+     Cette barrière masque le document aux visiteurs occasionnels ; elle ne
+     remplace pas une authentification serveur (contenu statique téléchargeable). */
+  var GATE_CLE = "lectures-unlock";
+  var GATE_MDP = "R2FicmllbA==";
+
+  function gateOuvert() {
+    try { return sessionStorage.getItem(GATE_CLE) === "1"; } catch (e) { return false; }
+  }
+
+  function gateOuvrir() {
+    document.body.classList.remove("is-locked");
+    try { sessionStorage.setItem(GATE_CLE, "1"); } catch (e) { /* stockage indisponible */ }
+  }
+
+  function initGate() {
+    var form = document.getElementById("gate-form");
+    var input = document.getElementById("gate-input");
+    var err = document.getElementById("gate-error");
+    if (!form || !input) return;
+    if (gateOuvert()) {
+      gateOuvrir();
+    } else {
+      input.focus();
+    }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (input.value === atob(GATE_MDP)) {
+        gateOuvrir();
+      } else {
+        err.hidden = false;
+        input.value = "";
+        input.focus();
+      }
+    });
+  }
+
   function init() {
+    initGate();
     renderLegend();
     renderBooks();
     renderSuivi();

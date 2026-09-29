@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mon parcours de lecture — CM2B (élève &amp; parents)</title>
   <meta name="description" content="Document à imprimer pour choisir ses 7 livres de l'année en CM2B : liste des œuvres proposées par niveau, présentation de chaque livre, carnet de lecteur et suivi des lectures.">
-  <link rel="stylesheet" href="assets/styles.css?v=47">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="stylesheet" href="assets/styles.css?v=48">
 </head>
-<body>
+<body class="is-locked">
+  <div class="gate" id="gate">
+    <form class="gate-box" id="gate-form" autocomplete="off">
+      <p class="gate-school">Parcours littéraire — CM2B</p>
+      <h1 class="gate-title">Document protégé</h1>
+      <p class="gate-text">Saisis le mot de passe pour accéder au document.</p>
+      <label class="gate-label" for="gate-input">Mot de passe</label>
+      <input class="gate-input" id="gate-input" type="password" inputmode="text" autocomplete="off" required>
+      <p class="gate-error" id="gate-error" role="alert" hidden>Mot de passe incorrect.</p>
+      <button class="gate-submit" type="submit">Ouvrir le document</button>
+    </form>
+  </div>
+
   <button type="button" class="print-fab" id="print">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></svg>
     Imprimer / PDF
@@ -115,6 +128,6 @@
   </main>
 
   <script src="assets/data.js?v=35"></script>
-  <script src="assets/app.js?v=35"></script>
+  <script src="assets/app.js?v=36"></script>
 </body>
 </html>
