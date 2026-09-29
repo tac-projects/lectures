@@ -564,32 +564,30 @@ html { scroll-behavior: smooth; }
 
 /* ---------- Impression : rendu identique à l'écran ---------- */
 @media print {
-  @page { size: A4; margin: 0; }
+  @page { size: A4; margin: 12mm; }
 
   html, body { background: #fff !important; }
 
   .print-fab { display: none !important; }
 
   .document {
-    width: 190mm;
-    margin: 10mm auto;
+    width: auto;
+    margin: 0;
     padding: 46px 48px 40px;
     background-color: transparent;
     background-image:
       repeating-linear-gradient(to bottom, var(--grid-h) 0 1px, transparent 1px 28px),
       repeating-linear-gradient(to right, var(--grid-v) 0 1px, transparent 1px 28px);
-    border-radius: 3px;
   }
 
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
-  .fiche, .step { break-inside: avoid; page-break-inside: avoid; }
+  .step { break-inside: avoid; page-break-inside: avoid; }
   h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
   .doc-head { break-after: avoid; page-break-after: avoid; }
   .legend-block, .note { break-inside: avoid; page-break-inside: avoid; }
-  .fiche-aide { break-inside: avoid; page-break-inside: avoid; }
   .fiche-img { break-inside: avoid; page-break-inside: avoid; }
-  .suivi-table tr, .parent-block, .parent-warn, .toc { break-inside: avoid; page-break-inside: avoid; }
+  .suivi-table tr, .parent-warn, .toc { break-inside: avoid; page-break-inside: avoid; }
 }
 
 /* ---------- Petits écrans ---------- */
