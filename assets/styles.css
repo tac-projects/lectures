@@ -520,13 +520,20 @@ html { scroll-behavior: smooth; }
 .fv-case { display: inline-flex; align-items: center; gap: 5px; font-size: .8rem; color: var(--ink-soft); }
 .fv-case .dot { width: 11px; height: 11px; }
 
-.fv-body {
-  display: grid;
-  grid-template-columns: minmax(190px, 34%) 1fr;
-  gap: 12px 16px;
-  align-items: stretch;
+.fv-page { display: flex; flex-direction: column; gap: 12px; }
+.fv-page-2 { margin-top: 26px; }
+.fv-reprise {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: .86rem;
 }
-.fv-col { display: flex; flex-direction: column; gap: 12px; }
+.fv-reprise-title {
+  font-family: var(--font-hand);
+  color: var(--bleu);
+  white-space: nowrap;
+}
 .fv-bloc {
   border: 1.5px solid var(--line);
   border-radius: 10px;
@@ -548,7 +555,7 @@ html { scroll-behavior: smooth; }
 
 .fv-draw {
   flex: 1 1 auto;
-  min-height: 24mm;
+  height: 85mm;
   border: 1.5px dashed #b9c9dc;
   border-radius: 8px;
   background: #fff;
@@ -616,8 +623,9 @@ html { scroll-behavior: smooth; }
   .legend-block, .note { break-inside: avoid; page-break-inside: avoid; }
   .carnet { break-before: page; page-break-before: always; margin-top: 0; }
   .zone-aide { break-before: page; page-break-before: always; margin-top: 0; }
-  .zone-fiche { break-before: page; page-break-before: always; margin-top: 0; padding: 0 0 6px; }
-  .fv-body, .fv-id, .fv-bloc { break-inside: avoid; page-break-inside: avoid; }
+  .zone-fiche { break-before: page; page-break-before: always; margin-top: 0; padding: 0; border: 0; background: #fff; }
+  .fv-page-2 { break-before: page; page-break-before: always; margin-top: 0; }
+  .fv-page, .fv-id, .fv-bloc { break-inside: avoid; page-break-inside: avoid; }
   .doc-foot { margin-top: 14px; padding-top: 10px; }
   .fiche-img { break-inside: avoid; page-break-inside: avoid; }
   .suivi-table tr, .toc { break-inside: avoid; page-break-inside: avoid; }

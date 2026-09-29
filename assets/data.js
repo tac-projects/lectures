@@ -630,8 +630,9 @@ const SUIVI_COLS = ["Livre choisi", "Niveau", "Commencé le", "Terminé le", "Ca
 /* Fiche de lecture vierge (section 7), proposée par un parent comme brouillon
    pour préparer le carnet de lecteur. Reprend les champs exigés par CARNET.
    type de bloc : "lignes" (zone réglée à écrire) ou "dessin" (cadre à illustrer).
-   col : colonne de la fiche ("gauche" ou "droite") ; grow : le bloc s'étire. */
+   page : 1 (recto) ou 2 (verso) ; grow : le bloc s'étire pour remplir la page. */
 const FICHE_LECTURE = {
+  reprise: "Ma fiche de lecture (suite)",
   identification: [
     { label: "Titre du livre", wide: true },
     { label: "Auteur" },
@@ -646,29 +647,29 @@ const FICHE_LECTURE = {
       titre: "Je présente l'auteur",
       texte: "Où et quand est-il né ? Quelles œuvres a-t-il écrites ?",
       type: "lignes",
-      lignes: 3,
-      col: "gauche"
-    },
-    {
-      titre: "J'illustre",
-      texte: "Un dessin, un collage ou une scène du livre.",
-      type: "dessin",
-      col: "gauche",
-      grow: true
+      lignes: 4,
+      page: 1
     },
     {
       titre: "Je raconte l'histoire",
       texte: "Au moins 10 phrases : les personnages, le résumé ou un passage qui m'a marqué(e).",
       type: "lignes",
-      lignes: 9,
-      col: "droite"
+      lignes: 14,
+      page: 1
     },
     {
       titre: "Je donne mon avis",
       texte: "Au moins 10 phrases : ce qui m'a plu, les illustrations, la présentation du livre.",
       type: "lignes",
-      lignes: 9,
-      col: "droite"
+      lignes: 12,
+      page: 2
+    },
+    {
+      titre: "J'illustre",
+      texte: "Un dessin, un collage ou une scène du livre.",
+      type: "dessin",
+      page: 2,
+      grow: true
     }
   ]
 };

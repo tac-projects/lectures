@@ -188,17 +188,22 @@
         body + "</div>";
     });
 
-    var colonnes = { gauche: [], droite: [] };
+    var pages = { 1: [], 2: [] };
     blocs.forEach(function (html, i) {
-      var col = FICHE_LECTURE.blocs[i].col === "droite" ? "droite" : "gauche";
-      colonnes[col].push(html);
+      pages[FICHE_LECTURE.blocs[i].page === 2 ? 2 : 1].push(html);
     });
 
+    var reprise = '<p class="fv-reprise">' +
+      '<span class="fv-reprise-title">' + esc(FICHE_LECTURE.reprise) + "</span>" +
+      '<span class="fv-id-label">Titre du livre</span><span class="fv-fill"></span></p>';
+
     host.innerHTML =
-      '<div class="fv-id">' + id + "</div>" +
-      '<div class="fv-body">' +
-        '<div class="fv-col">' + colonnes.gauche.join("") + "</div>" +
-        '<div class="fv-col">' + colonnes.droite.join("") + "</div>" +
+      '<div class="fv-page">' +
+        '<div class="fv-id">' + id + "</div>" +
+        pages[1].join("") +
+      "</div>" +
+      '<div class="fv-page fv-page-2">' +
+        reprise + pages[2].join("") +
       "</div>";
   }
 
