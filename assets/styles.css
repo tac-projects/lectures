@@ -566,7 +566,7 @@ html { scroll-behavior: smooth; }
 @media print {
   @page { size: A4; margin: 0; }
 
-  html, body { background: #e7e1d4 !important; }
+  html, body { background: #fff !important; }
 
   .print-fab { display: none !important; }
 
@@ -574,12 +574,11 @@ html { scroll-behavior: smooth; }
     width: 190mm;
     margin: 10mm auto;
     padding: 46px 48px 40px;
-    background-color: var(--paper);
+    background-color: transparent;
     background-image:
       repeating-linear-gradient(to bottom, var(--grid-h) 0 1px, transparent 1px 28px),
       repeating-linear-gradient(to right, var(--grid-v) 0 1px, transparent 1px 28px);
     border-radius: 3px;
-    box-shadow: 0 1px 0 #d9d2c2, 0 20px 44px -20px rgba(40, 40, 30, .55);
   }
 
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
