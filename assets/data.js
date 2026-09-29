@@ -572,52 +572,59 @@ const LIVRES = [
   }
 ];
 
-/* Les 5 étapes du carnet de lecteur (feuille remise par l'enseignant). */
+/* Les 5 étapes du carnet de lecteur (feuille remise par l'enseignant).
+   statut : "libre" (si je veux et comme je veux), "obligatoire", ou "choix"
+   (obligatoire, au moins une des propositions). */
 const CARNET = [
   {
     titre: "Décoration et appropriation du carnet",
     texte: "Je personnalise mon carnet de lecteur.",
+    statut: "libre",
     points: [
-      "Je peux mettre des autocollants.",
-      "Je peux faire un dessin illustrant le livre ou reproduire une illustration du livre.",
-      "Je peux faire des collages, des pliages ou du coloriage.",
-      "Je peux imaginer et réaliser le dessin d'une scène qui m'a beaucoup plu."
+      { texte: "Je peux mettre des autocollants.", statut: "libre" },
+      { texte: "Je peux faire un dessin illustrant le livre ou reproduire une illustration du livre.", statut: "libre" },
+      { texte: "Je peux faire des collages, des pliages ou du coloriage.", statut: "libre" },
+      { texte: "Je peux imaginer et réaliser le dessin d'une scène qui m'a beaucoup plu.", statut: "libre" }
     ]
   },
   {
     titre: "Présentation du livre",
     texte: "Je présente le livre que j'ai lu.",
+    statut: "obligatoire",
     points: [
-      "Je peux coller une photo de la couverture, l'imprimer ou reproduire sa couverture ou la reproduire sous forme de dessin.",
-      "J'indique la date de parution et le nom de la maison d'édition.",
-      "J'indique le nombre de pages et le temps que j'ai mis pour le lire."
+      { texte: "Je peux coller une photo de la couverture du livre, imprimer sa couverture ou la reproduire sous forme de dessin.", statut: "libre" },
+      { texte: "J'indique la date de parution et le nom de la maison d'édition.", statut: "obligatoire" },
+      { texte: "J'indique le nombre de pages et le temps que j'ai mis pour le lire.", statut: "obligatoire" }
     ]
   },
   {
     titre: "Présentation de l'auteur",
     texte: "Je présente l'auteur du livre.",
+    statut: "obligatoire",
     points: [
-      "J'indique où et quand il est né.",
-      "J'indique, lorsqu'elles sont connues, ses dates de naissance et de mort.",
-      "Je présente brièvement sa bibliographie, en citant quelques-unes de ses œuvres."
+      { texte: "J'indique où et quand il est né.", statut: "obligatoire" },
+      { texte: "J'indique, lorsqu'elles sont connues, ses dates de naissance et de mort.", statut: "obligatoire" },
+      { texte: "Je présente brièvement sa bibliographie, en citant quelques-unes de ses œuvres.", statut: "obligatoire" }
     ]
   },
   {
     titre: "Narration",
-    texte: "Je réalise au moins une des propositions suivantes, sous la forme d'un texte d'au moins 10 phrases.",
+    texte: "Je dois réaliser au moins une des propositions suivantes, sous la forme d'un texte d'au moins 10 phrases.",
+    statut: "choix",
     points: [
-      "Je décris les personnages principaux ou ceux que j'ai le plus aimés.",
-      "Je fais un résumé du livre.",
-      "Je décris brièvement le ou les passages qui m'ont marqué(e) et j'explique pourquoi."
+      { texte: "Je décris les personnages principaux ou ceux que j'ai le plus aimés.", statut: "choix" },
+      { texte: "Je fais un résumé du livre.", statut: "choix" },
+      { texte: "Je décris brièvement le ou les passages qui m'ont marqué(e) et j'explique pourquoi.", statut: "choix" }
     ]
   },
   {
     titre: "Mon avis",
     texte: "Je réalise au moins une des propositions suivantes, sous la forme d'un texte d'au moins 10 phrases.",
+    statut: "choix",
     points: [
-      "S'il s'agit d'un album ou d'une BD, je donne mon avis sur les illustrations.",
-      "Je dis ce qui m'a plu dans le livre et j'explique pourquoi cela m'a plu.",
-      "Je donne mon avis sur le format, la couverture et la présentation générale."
+      { texte: "S'il s'agit d'un album ou d'une BD, je donne mon avis sur les illustrations.", statut: "choix" },
+      { texte: "Je dis ce qui m'a plu dans le livre et j'explique pourquoi cela m'a plu.", statut: "choix" },
+      { texte: "Je donne mon avis sur le format, la couverture et la présentation générale.", statut: "choix" }
     ]
   }
 ];
