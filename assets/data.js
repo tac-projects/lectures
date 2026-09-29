@@ -573,13 +573,12 @@ const LIVRES = [
 ];
 
 /* Les 5 étapes du carnet de lecteur (feuille remise par l'enseignant).
-   statut : "libre" (si je veux et comme je veux), "obligatoire", ou "choix"
-   (obligatoire, au moins une des propositions). */
+   statut de chaque point : "libre" (si je veux et comme je veux) ou
+   "obligatoire" (tout le reste, y compris « au moins une proposition »). */
 const CARNET = [
   {
     titre: "Décoration et appropriation du carnet",
     texte: "Je personnalise mon carnet de lecteur.",
-    statut: "libre",
     points: [
       { texte: "Je peux mettre des autocollants.", statut: "libre" },
       { texte: "Je peux faire un dessin illustrant le livre ou reproduire une illustration du livre.", statut: "libre" },
@@ -590,7 +589,6 @@ const CARNET = [
   {
     titre: "Présentation du livre",
     texte: "Je présente le livre que j'ai lu.",
-    statut: "obligatoire",
     points: [
       { texte: "Je peux coller une photo de la couverture du livre, imprimer sa couverture ou la reproduire sous forme de dessin.", statut: "libre" },
       { texte: "J'indique la date de parution et le nom de la maison d'édition.", statut: "obligatoire" },
@@ -600,7 +598,6 @@ const CARNET = [
   {
     titre: "Présentation de l'auteur",
     texte: "Je présente l'auteur du livre.",
-    statut: "obligatoire",
     points: [
       { texte: "J'indique où et quand il est né.", statut: "obligatoire" },
       { texte: "J'indique, lorsqu'elles sont connues, ses dates de naissance et de mort.", statut: "obligatoire" },
@@ -610,21 +607,19 @@ const CARNET = [
   {
     titre: "Narration",
     texte: "Je dois réaliser au moins une des propositions suivantes, sous la forme d'un texte d'au moins 10 phrases.",
-    statut: "choix",
     points: [
-      { texte: "Je décris les personnages principaux ou ceux que j'ai le plus aimés.", statut: "choix" },
-      { texte: "Je fais un résumé du livre.", statut: "choix" },
-      { texte: "Je décris brièvement le ou les passages qui m'ont marqué(e) et j'explique pourquoi.", statut: "choix" }
+      { texte: "Je décris les personnages principaux ou ceux que j'ai le plus aimés.", statut: "obligatoire" },
+      { texte: "Je fais un résumé du livre.", statut: "obligatoire" },
+      { texte: "Je décris brièvement le ou les passages qui m'ont marqué(e) et j'explique pourquoi.", statut: "obligatoire" }
     ]
   },
   {
     titre: "Mon avis",
     texte: "Je réalise au moins une des propositions suivantes, sous la forme d'un texte d'au moins 10 phrases.",
-    statut: "choix",
     points: [
-      { texte: "S'il s'agit d'un album ou d'une BD, je donne mon avis sur les illustrations.", statut: "choix" },
-      { texte: "Je dis ce qui m'a plu dans le livre et j'explique pourquoi cela m'a plu.", statut: "choix" },
-      { texte: "Je donne mon avis sur le format, la couverture et la présentation générale.", statut: "choix" }
+      { texte: "S'il s'agit d'un album ou d'une BD, je donne mon avis sur les illustrations.", statut: "obligatoire" },
+      { texte: "Je dis ce qui m'a plu dans le livre et j'explique pourquoi cela m'a plu.", statut: "obligatoire" },
+      { texte: "Je donne mon avis sur le format, la couverture et la présentation générale.", statut: "obligatoire" }
     ]
   }
 ];

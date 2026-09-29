@@ -415,7 +415,6 @@ html { scroll-behavior: smooth; }
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-wrap: wrap;
 }
 .step h3 .num {
   width: 24px; height: 24px; flex: none;
@@ -431,34 +430,19 @@ html { scroll-behavior: smooth; }
 .step li { display: grid; grid-template-columns: 22px 1fr; gap: 9px; font-size: .87rem; align-items: start; }
 .step li .check { width: 18px; height: 18px; border-width: 2px; margin-top: 1px; }
 
-/* ---------- Statuts du carnet (facultatif vert / obligatoire rouge) ---------- */
+/* ---------- Statuts du carnet : la couleur est dans la case à cocher ---------- */
 .carnet-legende {
   list-style: none;
   margin: 14px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
 }
 .carnet-legende li { display: flex; align-items: center; gap: 9px; font-size: .85rem; color: var(--ink-soft); }
-.pt-dot { width: 11px; height: 11px; flex: none; border-radius: 50%; }
-.pt-dot.libre { background: var(--vert); }
-.pt-dot.obligatoire { background: var(--rouge); }
-.pt-dot.choix { background: transparent; border: 2.5px solid var(--bleu); }
-.step-tag {
-  margin-left: auto;
-  font-family: var(--font-hand);
-  font-size: .74rem;
-  font-weight: 400;
-  padding: 1px 9px;
-  border-radius: 999px;
-  white-space: nowrap;
-}
-.step-tag.libre { background: #e3f3e4; color: var(--vert); }
-.step-tag.obligatoire { background: #fbe3e3; color: var(--rouge); }
-.step-tag.choix { background: #e3eef9; color: var(--bleu); }
-.step .pt { display: flex; align-items: flex-start; gap: 8px; }
-.step .pt .pt-dot { margin-top: 5px; }
+.carnet-legende .check { width: 18px; height: 18px; border-width: 2px; margin: 0; transform: none; }
+.check.libre { border-color: var(--vert); }
+.check.obligatoire { border-color: var(--rouge); }
 
 /* ---------- Suivi des 7 lectures ---------- */
 .suivi { margin: 34px 0 0; }

@@ -99,16 +99,10 @@
     document.getElementById("books").innerHTML = html;
   }
 
-  /* Statuts du carnet : facultatif (feuille verte du maître), obligatoire
-     (feuille rouge) ou obligatoire « au moins une proposition ». */
-  var STATUTS = {
-    libre: { cls: "libre", label: "Si je veux et comme je veux" },
-    obligatoire: { cls: "obligatoire", label: "Obligatoire" },
-    choix: { cls: "choix", label: "Obligatoire · au moins une proposition" }
-  };
-
-  function statutMeta(statut) {
-    return STATUTS[statut] || STATUTS.obligatoire;
+  /* Statuts du carnet : vert (si je veux), rouge sinon (obligatoire).
+     La couleur est portée par la case à cocher en tête de ligne. */
+  function statutClass(statut) {
+    return statut === "libre" ? "libre" : "obligatoire";
   }
 
   function renderCarnet() {
@@ -116,24 +110,19 @@
     if (legende) {
       legende.innerHTML = [
         ["libre", "« Si je veux et comme je veux » — facultatif"],
-        ["obligatoire", "« C'est obligatoire, je dois donc le faire »"],
-        ["choix", "Obligatoire — je choisis au moins une proposition"]
+        ["obligatoire", "« C'est obligatoire, je dois donc le faire »"]
       ].map(function (it) {
-        return '<li><span class="pt-dot ' + it[0] + '" aria-hidden="true"></span>' + esc(it[1]) + "</li>";
+        return '<li><span class="check ' + it[0] + '" aria-hidden="true"></span>' + esc(it[1]) + "</li>";
       }).join("");
     }
 
     document.getElementById("steps").innerHTML = CARNET.map(function (step, i) {
-      var m = statutMeta(step.statut);
       var points = step.points.map(function (p) {
-        var pm = statutMeta(p.statut);
-        return '<li><span class="check" aria-hidden="true"></span>' +
-          '<span class="pt"><span class="pt-dot ' + pm.cls + '" role="img" aria-label="' +
-          esc(pm.label) + '"></span><span class="pt-txt">' + esc(p.texte) + "</span></span></li>";
+        return '<li><span class="check ' + statutClass(p.statut) + '" aria-hidden="true"></span>' +
+          "<span>" + esc(p.texte) + "</span></li>";
       }).join("");
       return '<div class="step">' +
-        '<h3><span class="num">' + (i + 1) + "</span>" + esc(step.titre) +
-        '<span class="step-tag ' + m.cls + '">' + esc(m.label) + "</span></h3>" +
+        '<h3><span class="num">' + (i + 1) + "</span>" + esc(step.titre) + "</h3>" +
         '<p class="intro">' + esc(step.texte) + "</p>" +
         "<ul>" + points + "</ul></div>";
     }).join("");
