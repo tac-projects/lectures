@@ -291,8 +291,7 @@ html { scroll-behavior: smooth; }
 .legend-block h2,
 .cat-head,
 .carnet h2,
-.suivi h2,
-.parents h2 {
+.suivi h2 {
   font-family: var(--font-hand);
   font-size: 1.55rem;
   color: #17324f;
@@ -466,68 +465,6 @@ html { scroll-behavior: smooth; }
 .suivi-table th:nth-child(6), .suivi-table td:nth-child(6) { width: 74px; text-align: center; }
 .suivi-table td .check { display: block; margin: 0 auto; }
 
-/* ---------- Guide pour les parents ---------- */
-.parent-link {
-  margin: 14px 0 0;
-  font-family: var(--font-hand);
-  font-size: .98rem;
-}
-.parents {
-  margin: 40px 0 0;
-  padding-top: 22px;
-  border-top: 3px double var(--line);
-}
-.parents-kicker {
-  font-family: var(--font-hand);
-  font-size: 1.02rem;
-  color: var(--accent-pencil);
-  margin: 0 0 2px;
-  letter-spacing: .4px;
-}
-.parents-lead { font-size: .93rem; color: var(--ink-soft); margin: 8px 0 0; }
-
-.parent-block { margin: 20px 0 0; }
-.parent-block h3 {
-  font-family: var(--font-hand);
-  font-size: 1.16rem;
-  color: #17324f;
-  margin: 0 0 6px;
-}
-.parent-block .intro { font-size: .9rem; color: var(--ink-soft); margin: 0 0 8px; }
-.parent-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
-.parent-list li {
-  display: grid;
-  grid-template-columns: 16px 1fr;
-  gap: 9px;
-  font-size: .9rem;
-  color: #3a4b60;
-}
-.pmark {
-  width: 9px; height: 9px; margin-top: .5em;
-  border-radius: 50% 45% 55% 50%;
-  background: var(--bleu);
-}
-.parent-warn {
-  margin-top: 14px;
-  background: #fdf1f1;
-  border: 1.5px dashed #e0a3a3;
-  border-radius: 12px;
-  padding: 12px 16px;
-}
-.parent-warn-title {
-  font-family: var(--font-hand);
-  font-weight: 700;
-  color: var(--rouge);
-  margin: 0 0 6px;
-}
-.parent-warn ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
-.parent-warn li { position: relative; padding-left: 18px; font-size: .88rem; color: #7a3b3b; }
-.parent-warn li::before {
-  content: ""; position: absolute; left: 0; top: .55em;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--rouge);
-}
-
 /* ---------- Pied ---------- */
 .doc-foot {
   margin-top: 30px;
@@ -587,7 +524,7 @@ html { scroll-behavior: smooth; }
   .doc-head { break-after: avoid; page-break-after: avoid; }
   .legend-block, .note { break-inside: avoid; page-break-inside: avoid; }
   .fiche-img { break-inside: avoid; page-break-inside: avoid; }
-  .suivi-table tr, .parent-warn, .toc { break-inside: avoid; page-break-inside: avoid; }
+  .suivi-table tr, .toc { break-inside: avoid; page-break-inside: avoid; }
 }
 
 /* ---------- Petits écrans ---------- */

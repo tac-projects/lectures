@@ -133,33 +133,11 @@
       "<thead>" + head + "</thead><tbody>" + body + "</tbody></table>";
   }
 
-  function renderParents() {
-    var host = document.getElementById("parents-content");
-    if (!host) return;
-    host.innerHTML = PARENTS.map(function (b) {
-      var points = b.points.map(function (p) {
-        return '<li><span class="pmark" aria-hidden="true"></span><span>' + esc(p) + "</span></li>";
-      }).join("");
-      var enc = "";
-      if (b.encadre) {
-        enc = '<div class="parent-warn"><p class="parent-warn-title">' + esc(b.encadre.titre) + "</p><ul>" +
-          b.encadre.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") +
-          "</ul></div>";
-      }
-      return '<article class="parent-block">' +
-        "<h3>" + esc(b.titre) + "</h3>" +
-        '<p class="intro">' + esc(b.intro) + "</p>" +
-        '<ul class="parent-list">' + points + "</ul>" + enc +
-        "</article>";
-    }).join("");
-  }
-
   function init() {
     renderLegend();
     renderBooks();
     renderSuivi();
     renderCarnet();
-    renderParents();
     document.getElementById("print").addEventListener("click", function () {
       window.print();
     });

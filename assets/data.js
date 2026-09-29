@@ -577,7 +577,6 @@ const CARNET = [
   {
     titre: "Décoration et appropriation du carnet",
     texte: "Je personnalise mon carnet de lecteur.",
-    questionParent: "Comment veux-tu personnaliser la couverture et les pages de ton carnet ?",
     points: [
       "Je peux mettre des autocollants.",
       "Je peux faire un dessin illustrant le livre ou reproduire une illustration du livre.",
@@ -588,7 +587,6 @@ const CARNET = [
   {
     titre: "Présentation du livre",
     texte: "Je présente le livre que j'ai lu.",
-    questionParent: "Où as-tu trouvé la couverture, l'éditeur, la date de parution et le nombre de pages ?",
     points: [
       "Je peux coller une photo de la couverture, l'imprimer ou reproduire sa couverture ou la reproduire sous forme de dessin.",
       "J'indique la date de parution et le nom de la maison d'édition.",
@@ -598,7 +596,6 @@ const CARNET = [
   {
     titre: "Présentation de l'auteur",
     texte: "Je présente l'auteur du livre.",
-    questionParent: "Que sais-tu de la vie de l'auteur et de ses autres livres ?",
     points: [
       "J'indique où et quand il est né.",
       "J'indique, lorsqu'elles sont connues, ses dates de naissance et de mort.",
@@ -608,7 +605,6 @@ const CARNET = [
   {
     titre: "Narration",
     texte: "Je réalise au moins une des propositions suivantes, sous la forme d'un texte d'au moins 10 phrases.",
-    questionParent: "Quels personnages ou quels passages as-tu envie de raconter, et pourquoi ?",
     points: [
       "Je décris les personnages principaux ou ceux que j'ai le plus aimés.",
       "Je fais un résumé du livre.",
@@ -618,7 +614,6 @@ const CARNET = [
   {
     titre: "Mon avis",
     texte: "Je réalise au moins une des propositions suivantes, sous la forme d'un texte d'au moins 10 phrases.",
-    questionParent: "Qu'est-ce qui t'a plu ou déplu, et pourquoi ?",
     points: [
       "S'il s'agit d'un album ou d'une BD, je donne mon avis sur les illustrations.",
       "Je dis ce qui m'a plu dans le livre et j'explique pourquoi cela m'a plu.",
@@ -629,66 +624,3 @@ const CARNET = [
 
 /* Colonnes du tableau de suivi « Mes 7 livres de l'année » (7 lignes vides). */
 const SUIVI_COLS = ["Livre choisi", "Niveau", "Commencé le", "Terminé le", "Carnet fait"];
-
-/*
-  Guide destiné aux parents. Chaque bloc : { titre, intro, points[] }.
-  Le bloc « Aider à remplir le carnet » réutilise les questions définies
-  dans CARNET pour ne pas dupliquer le contenu.
-*/
-const PARENTS = [
-  {
-    titre: "Le dispositif en clair",
-    intro: "Votre enfant choisit 7 livres à lire pendant l'année de CM2 (nombre fixé par l'enseignant). La liste sert de point de départ, pas de programme à suivre à la lettre. Ce guide, rédigé par un parent d'élève, est une aide indicative : il ne se substitue pas aux consignes du maître.",
-    points: [
-      "La liste est indicative : elle n'est ni exhaustive, ni obligatoire. Un livre qui n'y figure pas peut aussi être choisi.",
-      "Les trois niveaux indiquent la difficulté de lecture de l'œuvre, jamais le niveau de l'enfant.",
-      "Chaque livre lu donne lieu à un carnet de lecteur en 5 étapes, présenté plus bas.",
-      "L'objectif est le plaisir de lire et l'autonomie, pas la performance."
-    ]
-  },
-  {
-    titre: "Aider à choisir",
-    intro: "Le choix doit rester celui de l'enfant. Votre rôle est de l'aider à explorer, pas de décider à sa place.",
-    points: [
-      "Feuilletez ensemble : lisez la 4e de couverture, la première page, regardez les illustrations.",
-      "Cherchez un équilibre : alternez les niveaux et variez les genres (aventure, humour, contes, imaginaire…).",
-      "Une fois les 7 titres arrêtés, notez-les dans le tableau « Mes 7 livres de l'année ».",
-      "Acceptez qu'il change d'avis en cours d'année : la liste est un point de départ, pas un contrat."
-    ]
-  },
-  {
-    titre: "Accompagner la lecture",
-    intro: "Lire avec son enfant ou à côté de lui entretient le plaisir et la confiance.",
-    points: [
-      "Préférez des moments réguliers et courts (10 à 15 minutes) à une longue séance imposée.",
-      "Alternez la lecture à voix haute par l'adulte et la lecture autonome par l'enfant.",
-      "Posez des questions ouvertes : « Qu'est-ce qui t'a surpris ? », « Que ferais-tu à sa place ? ».",
-      "Ne transformez pas la lecture en contrôle : on discute, on ne vérifie pas."
-    ]
-  },
-  {
-    titre: "Aider à remplir le carnet",
-    intro: "Le carnet comporte 5 étapes. Pour chacune, voici une question simple à poser à votre enfant. Les réponses doivent venir de lui : aidez-le à formuler, sans rédiger à sa place.",
-    points: CARNET.map(function (step, i) {
-      return "Étape " + (i + 1) + " — " + step.titre + " : " + step.questionParent;
-    })
-  },
-  {
-    titre: "Le bon équilibre",
-    intro: "Chacun a son rôle : l'enseignant cadre, vous accompagnez, l'enfant lit et raconte.",
-    points: [
-      "L'enseignant : présente la liste et le carnet en classe.",
-      "Le parent : aide à choisir, facilite le temps de lecture et encourage.",
-      "L'enfant : choisit ses livres, lit et rédige son carnet lui-même."
-    ],
-    encadre: {
-      titre: "À éviter",
-      points: [
-        "Choisir les livres à sa place.",
-        "Rédiger le carnet ou dicter les réponses.",
-        "Comparer avec les autres enfants ou transformer la lecture en obligation.",
-        "Acheter les 7 livres d'un coup : on peut emprunter en bibliothèque, en BCD ou en médiathèque."
-      ]
-    }
-  }
-];
