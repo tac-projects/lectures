@@ -201,6 +201,12 @@ h1 {
   margin: 0 0 4px;
 }
 .zone-head p { margin: 0; font-size: .86rem; color: var(--ink-soft); }
+.hl-jaune {
+  background: linear-gradient(transparent 55%, var(--marker) 55%);
+  padding: 0 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 
 /* Présentation d'un livre : aide proposée par un parent */
 .fiche-aide {
@@ -210,6 +216,9 @@ h1 {
   background: #fdfaf2;
   border-radius: 0 8px 8px 0;
 }
+/* Œuvre commune (L'Odyssée) : bloc d'aide sur fond vert. */
+.fiche-aide-commune { border-left-color: #bcdcc3; background: #f0f7f1; }
+.fiche-aide-commune .auteur-bio { border-top-color: #cfe6d4; }
 .auteur-bio {
   font-size: .85rem;
   color: var(--ink-soft);
@@ -343,6 +352,8 @@ html { scroll-behavior: smooth; }
   border-bottom: 1px dashed var(--line);
 }
 .fiche:last-child { border-bottom: 0; }
+/* Œuvre commune : case masquée mais conservée pour garder l'alignement. */
+.fiche-sans-case .check { visibility: hidden; }
 
 .check {
   width: 26px; height: 26px;
@@ -375,8 +386,8 @@ html { scroll-behavior: smooth; }
 .meta .lvl { display: inline-flex; align-items: center; gap: 6px; }
 .meta .lvl .dot { width: 11px; height: 11px; }
 .meta .note-badge {
-  background: var(--marker);
-  color: #6b5200;
+  background: #d7ecdb;
+  color: #2e7d32;
   font-weight: 700;
   padding: 1px 8px;
   border-radius: 999px;
@@ -454,7 +465,7 @@ html { scroll-behavior: smooth; }
 .carnet-legende li { display: flex; align-items: center; gap: 9px; font-size: .85rem; color: var(--ink-soft); }
 .carnet-legende .check { width: 18px; height: 18px; border-width: 2px; margin: 0; transform: none; }
 
-/* ---------- Suivi des 7 lectures ---------- */
+/* ---------- Suivi des 6 lectures ---------- */
 .suivi { margin: 34px 0 0; }
 .suivi > p { font-size: .93rem; color: var(--ink-soft); margin: 8px 0 0; }
 
@@ -514,6 +525,7 @@ html { scroll-behavior: smooth; }
   min-height: 1.5em;
 }
 .fv-id-item.wide { grid-column: 1 / -1; }
+.fv-id-badge { grid-column: 1 / -1; justify-self: end; margin-left: 0; }
 .fv-id-label { font-family: var(--font-hand); color: #17324f; white-space: nowrap; }
 .fv-fill { flex: 1 1 auto; border-bottom: 1.5px dotted #9fb0c4; height: 1.05em; min-width: 40px; }
 .fv-cases { display: inline-flex; gap: 12px; align-items: center; }
@@ -560,6 +572,20 @@ html { scroll-behavior: smooth; }
   font-size: 1.05rem;
   color: #17324f;
   margin: 0 0 2px;
+}
+.fv-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: #e3eef9;
+  color: #1565c0;
+  font-family: var(--font-body);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
 .fv-hint { font-size: .78rem; color: var(--ink-soft); margin: 0 0 7px; }
 

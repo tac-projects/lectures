@@ -52,7 +52,7 @@
     var a = authorOf(book);
     var noteBadge = book.note ? '<span class="note-badge">' + esc(book.note) + "</span>" : "";
     return '' +
-      '<div class="fiche">' +
+      '<div class="fiche' + (book.commune ? " fiche-sans-case" : "") + '">' +
         '<span class="check" aria-hidden="true"></span>' +
         '<div class="fiche-body">' +
           "<h3>" + esc(book.titre) + "</h3>" +
@@ -64,7 +64,7 @@
             '<span class="lvl"><span class="dot n' + book.niveau + '"></span>' + esc(niveauLong(book)) + "</span>" +
             noteBadge +
           "</p>" +
-          '<div class="fiche-aide">' +
+          '<div class="fiche-aide' + (book.commune ? " fiche-aide-commune" : "") + '">' +
             (book.image
               ? '<figure class="fiche-img"><img src="' + esc(book.image) + '" alt="' + esc(book.imageAlt || "") + '">' +
                 (book.imageCredit ? "<figcaption>" + esc(book.imageCredit) + "</figcaption>" : "") + "</figure>"
@@ -139,7 +139,7 @@
       return '<th scope="col">' + esc(c) + "</th>";
     }).join("") + "</tr>";
     var body = "";
-    for (var i = 1; i <= 7; i++) {
+    for (var i = 1; i <= 6; i++) {
       body += '<tr><th scope="row" class="suivi-num">' + i + "</th>";
       SUIVI_COLS.forEach(function (c, j) {
         var cell = j === SUIVI_COLS.length - 1
@@ -158,7 +158,8 @@
     var host = document.getElementById("fiche-vierge");
     if (!host || typeof FICHE_LECTURE === "undefined") return;
 
-    var id = FICHE_LECTURE.identification.map(function (f) {
+    var id = '<span class="fv-badge fv-id-badge">exemple</span>' +
+      FICHE_LECTURE.identification.map(function (f) {
       var mod = f.wide ? " wide" : "";
       if (f.cases) {
         return '<p class="fv-id-item' + mod + '">' +
@@ -189,7 +190,7 @@
         (b.grow ? " fv-bloc-grow" : "") +
         (b.type === "couverture" ? " fv-bloc-cover" : "");
       return '<div class="' + cls + '">' +
-        "<h3>" + esc(b.titre) + "</h3>" +
+        "<h3>" + esc(b.titre) + '<span class="fv-badge">exemple</span>' + "</h3>" +
         '<p class="fv-hint">' + esc(b.texte) + "</p>" +
         body + "</div>";
     }

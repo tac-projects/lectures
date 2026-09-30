@@ -145,6 +145,26 @@ const TAGS = [
   "Solidarité / amitié"
 ];
 
+/* L'Odyssée est l'œuvre commune étudiée en classe ; elle figure dans la liste
+   des œuvres (LIVRES) mais ne compte pas parmi les 6 livres au choix. */
+const ODYSSEE = {
+  id: "odyssee",
+  titre: "L'Odyssée",
+  auteur: "homere",
+  annee: "VIIIe siècle av. J.-C.",
+  cat: "P",
+  niveau: 3,
+  genre: "Épopée",
+  tags: ["Aventure"],
+  note: "Œuvre commune",
+  commune: true,
+  image: "assets/images/odyssee.webp",
+  imageAlt: "Peinture de J. M. W. Turner : Ulysse et Polyphème.",
+  imageCredit: "J. M. W. Turner",
+  accroche: "Dix ans pour rentrer chez soi, entre monstres, sirènes et tempêtes.",
+  resume: "La guerre de Troie est terminée, mais Ulysse, l'un de ses héros, n'est pas encore rentré chez lui. Il veut rejoindre Ithaque, où l'attendent sa femme Pénélope et son fils Télémaque, mais les dieux en ont décidé autrement : son voyage durera dix longues années. Sur la mer, il affronte des épreuves sans nombre : le Cyclope Polyphème, qui dévore ses compagnons ; les sirènes, dont le chant attire les marins vers la mort ; la magicienne Circé ; la nymphe Calypso, qui le retient prisonnier ; les tempêtes envoyées par Poséidon. Pendant ce temps, à Ithaque, des prétendants s'installent dans son palais et convoitent sa femme et son trône, tandis que Pénélope ruse pour gagner du temps. Cette épopée attribuée à Homère est l'un des textes fondateurs de notre culture : elle célèbre l'intelligence, le courage et le prix du retour. Un fabuleux récit d'aventures et d'émotions, souvent adapté pour la jeunesse."
+};
+
 const LIVRES = [
   /* ---------------- I. ŒUVRES DU PATRIMOINE ---------------- */
   {
@@ -297,22 +317,7 @@ const LIVRES = [
     accroche: "En suivant un lapin pressé, Alice bascule dans un monde sans logique.",
     resume: "En apercevant un lapin blanc vêtu d'un gilet, qui regarde sa montre et semble très pressé, Alice le suit jusque dans son terrier. La voilà qui bascule dans un monde étrange et merveilleux : le pays des merveilles. Là, plus rien n'obéit à la logique. Alice grandit et rapetisse au gré des gâteaux et des potions, pleure des mares de larmes, discute avec une chenille qui fume, prend le thé avec un Chapelier fou et un Lièvre de mars, rencontre un Chat au sourire inquiétant qui disparaît à volonté, et croise la terrible Reine de cœur. Chaque rencontre est l'occasion de jeux de langage, de devinettes et de situations saugrenues. Écrit par Lewis Carroll en 1865, ce récit plein de fantaisie et d'humour noir est aussi une réflexion sur l'enfance, le temps et les règles. Un classique intemporel qui a nourri l'imaginaire de générations de lecteurs."
   },
-  {
-    id: "odyssee",
-    titre: "L'Odyssée",
-    auteur: "homere",
-    annee: "VIIIe siècle av. J.-C.",
-    cat: "P",
-    niveau: 3,
-    genre: "Épopée",
-    tags: ["Aventure"],
-    note: "Œuvre commune de la classe",
-    image: "assets/images/odyssee.webp",
-    imageAlt: "Peinture de J. M. W. Turner : Ulysse et Polyphème.",
-    imageCredit: "J. M. W. Turner",
-    accroche: "Dix ans pour rentrer chez soi, entre monstres, sirènes et tempêtes.",
-    resume: "La guerre de Troie est terminée, mais Ulysse, l'un de ses héros, n'est pas encore rentré chez lui. Il veut rejoindre Ithaque, où l'attendent sa femme Pénélope et son fils Télémaque, mais les dieux en ont décidé autrement : son voyage durera dix longues années. Sur la mer, il affronte des épreuves sans nombre : le Cyclope Polyphème, qui dévore ses compagnons ; les sirènes, dont le chant attire les marins vers la mort ; la magicienne Circé ; la nymphe Calypso, qui le retient prisonnier ; les tempêtes envoyées par Poséidon. Pendant ce temps, à Ithaque, des prétendants s'installent dans son palais et convoitent sa femme et son trône, tandis que Pénélope ruse pour gagner du temps. Cette épopée attribuée à Homère est l'un des textes fondateurs de notre culture : elle célèbre l'intelligence, le courage et le prix du retour. Un fabuleux récit d'aventures et d'émotions, souvent adapté pour la jeunesse."
-  },
+  ODYSSEE,
   {
     id: "robinson",
     titre: "Robinson Crusoé",
@@ -624,7 +629,7 @@ const CARNET = [
   }
 ];
 
-/* Colonnes du tableau de suivi « Mes 7 livres de l'année » (7 lignes vides). */
+/* Colonnes du tableau de suivi « Mes 6 livres de l'année » (6 lignes vides). */
 const SUIVI_COLS = ["Livre choisi", "Niveau", "Commencé le", "Terminé le", "Carnet fait"];
 
 /* Fiche de lecture vierge (section 7), proposée par un parent comme brouillon
@@ -633,7 +638,7 @@ const SUIVI_COLS = ["Livre choisi", "Niveau", "Commencé le", "Terminé le", "Ca
    "couverture" (grande zone pour coller/imprimer/dessiner la couverture).
    page : 1, 2 ou 3 ; grow : le bloc s'étire pour remplir la page. */
 const FICHE_LECTURE = {
-  reprise: "Ma fiche de lecture (suite)",
+  reprise: "Un exemple de fiche de lecture (suite)",
   identification: [
     { label: "Titre du livre", wide: true },
     { label: "Auteur" },
