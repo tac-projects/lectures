@@ -190,7 +190,7 @@
         (b.grow ? " fv-bloc-grow" : "") +
         (b.type === "couverture" ? " fv-bloc-cover" : "");
       return '<div class="' + cls + '">' +
-        "<h3>" + esc(b.titre) + '<span class="fv-badge">exemple</span>' + "</h3>" +
+        "<h3>" + esc(b.titre) + "</h3>" +
         '<p class="fv-hint">' + esc(b.texte) + "</p>" +
         body + "</div>";
     }
