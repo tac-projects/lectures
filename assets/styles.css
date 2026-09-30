@@ -610,6 +610,8 @@ html { scroll-behavior: smooth; }
   color: #6b7a8c;
 }
 .doc-foot p { margin: 0 0 4px; }
+.doc-foot .foot-contact { margin-top: 6px; overflow-wrap: anywhere; }
+.doc-foot .foot-contact a { color: var(--bleu); text-decoration: underline; }
 
 /* ---------- Bouton d'impression (écran seulement) ---------- */
 .print-fab {
