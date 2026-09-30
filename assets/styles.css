@@ -606,11 +606,12 @@ html { scroll-behavior: smooth; }
   margin-top: 30px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
-  font-size: .78rem;
+  font-size: .72rem;
+  line-height: 1.4;
   color: #6b7a8c;
 }
-.doc-foot p { margin: 0 0 4px; }
-.doc-foot .foot-contact { margin-top: 6px; overflow-wrap: anywhere; }
+.doc-foot p { margin: 0 0 2px; }
+.doc-foot .foot-contact { margin-top: 3px; overflow-wrap: anywhere; }
 .doc-foot .foot-contact a { color: var(--bleu); text-decoration: underline; }
 
 /* ---------- Bouton d'impression (écran seulement) ---------- */
@@ -809,7 +810,7 @@ body.is-locked .gate {
   .zone-fiche { break-before: page; page-break-before: always; margin-top: 0; padding: 0; border: 0; background: #fff; }
   .fv-page-2, .fv-page-3 { break-before: page; page-break-before: always; margin-top: 0; }
   .fv-page, .fv-id, .fv-bloc { break-inside: avoid; page-break-inside: avoid; }
-  .doc-foot { margin-top: 14px; padding-top: 10px; }
+  .doc-foot { margin-top: 10px; padding-top: 8px; }
   .fiche-img { break-inside: avoid; page-break-inside: avoid; }
   .suivi-table tr, .toc { break-inside: avoid; page-break-inside: avoid; }
 }
@@ -817,7 +818,7 @@ body.is-locked .gate {
 /* ---------- Petits écrans ---------- */
 @media (max-width: 620px) {
   body { font-size: 15px; }
-  .document { margin: 0; padding: 24px 18px 40px; border-radius: 0; box-shadow: none; }
+  .document { margin: 0; padding: 24px 18px 112px; border-radius: 0; box-shadow: none; }
   .stamp { position: static; display: inline-block; transform: rotate(-3deg); margin: 12px 0 0; }
   .steps { grid-template-columns: 1fr; }
 
