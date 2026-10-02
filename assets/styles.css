@@ -441,19 +441,16 @@ html { scroll-behavior: smooth; }
 .step li { display: grid; grid-template-columns: 22px 1fr; gap: 9px; font-size: .87rem; align-items: start; }
 .step li .check { width: 18px; height: 18px; border-width: 2px; margin-top: 1px; }
 
-/* ---------- Statuts du carnet : point vert / rouge dans la case d'origine ---------- */
+/* ---------- Statuts du carnet : fond vert / rouge clair dans la case d'origine ---------- */
 .step li .check,
 .carnet-legende .check { position: relative; }
 .check-dot {
   position: absolute;
   inset: 0;
-  margin: auto;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
+  border-radius: inherit;
 }
-.check-dot.libre { background: var(--vert); }
-.check-dot.obligatoire { background: var(--rouge); }
+.check-dot.libre { background: #d9f2dd; }
+.check-dot.obligatoire { background: #fbdcda; }
 .carnet-legende {
   list-style: none;
   margin: 14px 0 0;

@@ -100,7 +100,7 @@
   }
 
   /* Statuts du carnet : vert (si je veux), rouge sinon (obligatoire).
-     La case garde son style d'origine ; le point de couleur est à l'intérieur. */
+     Le fond de la case est teinté, assez clair pour que l'enfant puisse cocher. */
   function statutClass(statut) {
     return statut === "libre" ? "libre" : "obligatoire";
   }
