@@ -100,14 +100,13 @@
   }
 
   /* Statuts du carnet : vert (si je veux), rouge sinon (obligatoire).
-     Le fond de la case est teinté, assez clair pour que l'enfant puisse cocher. */
+     La case est teintée (fond clair + contour) pour rester cochable à la main. */
   function statutClass(statut) {
     return statut === "libre" ? "libre" : "obligatoire";
   }
 
   function checkBox(statut) {
-    return '<span class="check" aria-hidden="true"><span class="check-dot ' +
-      statutClass(statut) + '"></span></span>';
+    return '<span class="check ' + statutClass(statut) + '" aria-hidden="true"></span>';
   }
 
   function renderCarnet() {
