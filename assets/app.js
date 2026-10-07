@@ -219,6 +219,7 @@
      remplace pas une authentification serveur (contenu statique téléchargeable). */
   var GATE_CLE = "lectures-unlock";
   var GATE_MDP = "R2FicmllbA==";
+  var GATE_ACTIF = false; // passer à true pour réafficher l'écran de mot de passe
 
   function gateOuvert() {
     try { return sessionStorage.getItem(GATE_CLE) === "1"; } catch (e) { return false; }
@@ -235,6 +236,7 @@
     var err = document.getElementById("gate-error");
     var reveal = document.getElementById("gate-reveal");
     if (!form || !input) return;
+    if (!GATE_ACTIF) { document.body.classList.remove("is-locked"); return; }
     if (reveal) {
       reveal.addEventListener("click", function () {
         var shown = input.type === "text";
